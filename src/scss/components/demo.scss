@@ -1,0 +1,200 @@
+//
+// @Author: Martin Farkas
+// @Email:  info@websites-graphix.com
+//
+
+@keyframes blink {
+  50% {
+    opacity: 0.3;
+  }
+}
+.app-window {
+  width: 340px;
+  height: 550px;
+  flex-shrink: 0;
+  --app-text: #f5f5f7;
+  --app-text-rgb: 245 245 247;
+  --app-muted: hsl(0 0% 100% / 0.5);
+  --app-border: hsl(0 0% 100% / 0.14);
+  --app-fill: hsl(0 0% 100% / 0.16);
+  --app-processing: hsl(210 100% 52% / 0.15);
+  --app-accent: #007aff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px;
+  background: hsl(240 3% 11% / 0.92);
+  border: 1px solid var(--app-border);
+  box-shadow:
+    0 0 0 1px hsl(0 0% 0% / 0.35),
+    0 24px 48px hsl(0 0% 0% / 0.45);
+  font-family:
+    -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--app-text);
+}
+.app-titlebar {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 2rem;
+  padding-left: 0.75rem;
+  background: hsl(240 3% 11% / 0.55);
+  border-bottom: 1px solid hsl(0 0% 100% / 0.06);
+}
+.app-traffic {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+.app-traffic__btn {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  border: 1px solid hsl(0 0% 0% / 0.18);
+  box-shadow: inset 0 1px 0 hsl(0 0% 100% / 0.12);
+}
+.app-traffic__btn--close {
+  background: #ff5f57;
+}
+.app-traffic__btn--minimize {
+  background: #febc2e;
+}
+.app-traffic__btn--zoom {
+  background: #28c840;
+}
+.app-titlebar__drag {
+  flex: 1;
+  align-self: stretch;
+  margin-left: 0.5rem;
+  cursor: default;
+}
+.app-window__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  padding: 0.25rem 0.5rem 0.5rem;
+}
+.app-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+.app-dragzone {
+  position: relative;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+  padding: 1.25em 1em;
+  border: 1px dashed var(--app-border);
+  border-radius: 0.5rem;
+  color: var(--app-text);
+  font-style: italic;
+  text-align: center;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+  h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.375rem;
+    font-weight: 600;
+    font-style: normal;
+    text-shadow: 0 1px 3px hsl(0 0% 0% / 0.15);
+  }
+  strong {
+    display: block;
+    color: var(--app-muted);
+    font-size: inherit;
+    font-weight: 400;
+    text-shadow: 0 1px 3px hsl(0 0% 0% / 0.15);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    background: var(--app-processing);
+  }
+  &.is--processing::after {
+    opacity: 1;
+    background-image: radial-gradient(circle, hsl(210 100% 52% / 0.35) 0%, transparent 70%);
+    animation: demo-pulse 1.2s ease-in-out infinite;
+  }
+}
+@keyframes demo-pulse {
+  50% {
+    opacity: 0.55;
+  }
+}
+.app-result {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding-top: 0.75rem;
+}
+.demo-row {
+  padding: 1rem 0.25rem;
+  border-bottom: 1px solid var(--app-border);
+  transition: opacity 0.3s;
+  &:last-child {
+    border-bottom: none;
+  }
+  &.queued {
+    opacity: 0.35;
+    .demo-to {
+      color: var(--app-muted);
+      font-weight: 400;
+    }
+  }
+  &.active {
+    opacity: 1;
+    .demo-to {
+      color: var(--app-text);
+      font-style: italic;
+      animation: blink 1s step-end infinite;
+      @media (prefers-reduced-motion: reduce) {
+        animation: none;
+      }
+    }
+  }
+  &.done {
+    opacity: 1;
+  }
+}
+.demo-to {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--app-muted);
+}
+.demo-row.done .demo-to {
+  color: var(--app-text);
+  font-style: normal;
+}
+.demo-path {
+  display: none;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--app-accent);
+  word-break: break-all;
+}
+.demo-row.done .demo-path {
+  display: block;
+}
+.app-footer {
+  flex-shrink: 0;
+  padding-top: 0.75rem;
+  text-align: center;
+}
+.app-settings-btn {
+  font-size: 0.75rem;
+  color: var(--app-accent);
+}

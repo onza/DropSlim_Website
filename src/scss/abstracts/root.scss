@@ -1,0 +1,37 @@
+//
+// @Author: Martin Farkas
+// @Email:  info@websites-graphix.com
+//
+
+:root {
+  --bg: hsl(220 60% 4%);
+  --bg-2: hsl(220 53% 7%);
+
+  --text: hsl(45 17% 91%);
+  --muted: hsl(44 7% 70%);
+  --dim: hsl(42 4% 54%);
+  --line: hsl(220 37% 16%);
+  --accent: hsl(210 100% 52%);
+
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --w-website: min(1280px, 100% - 3rem);
+
+  --tracking-tight: 0.01em;
+  --tracking: 0.025em;
+  --tracking-wide: 0.05em;
+
+  --size-h3: clamp(1.375rem, 2.5vw, 1.75rem);
+  --size-h4: clamp(1rem, 1.5vw, 1.125rem);
+  --size-body-lg: clamp(1.125rem, 1.5vw, 1.375rem);
+  --size-label: clamp(0.938rem, 1.2vw, 1.125rem);
+  --size-li-num: clamp(1.5rem, 4vw, 1.875rem);
+  --size-caption: clamp(0.875rem, 1vw, 1rem);
+  --size-ui: clamp(0.938rem, 1vw, 1rem);
+
+  --section-gap: clamp(4rem, 8vw, 10rem);
+
+  --glass-bg: hsl(222 56% 7% / 0.42);
+  --glass-border: hsl(0 0% 100% / 0.09);
+  --glass-highlight: hsl(0 0% 100% / 0.06);
+}

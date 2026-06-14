@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="hsl(220 60% 4%)" />
+    <meta name="color-scheme" content="dark" />
+    <!-- seo -->
+    <link rel="icon" href="favicon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="dropslim-icon.png" />
+    <title>DropSlim</title>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="ambient" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="header">
+      <a href="en.html" class="wordmark">Drop<span>Slim</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <a href="index.html" class="lang-link" hreflang="de">DE</a>
+          <span class="lang-link is-current" aria-current="page">EN</span>
+        </div>
+        <a
+          href="https://github.com/onza/DropSlim"
+          class="nav-github"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="DropSlim on GitHub (opens in new tab)"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+            />
+          </svg>
+        </a>
+        <a href="#download" class="nav-cta">Download</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="section hero">
+        <div class="hero-stage">
+          <div class="hero-copy">
+            <p class="hero-tag">macOS · local · free · open source</p>
+            <h1>
+              Make large<br />
+              files <em>small</em>.
+            </h1>
+            <div class="hero-rest">
+              <p class="hero-sub">
+                Drop your images. DropSlim crunches the numbers. Done.<br />
+                Everything stays on your Mac — no account, no server.
+              </p>
+              <div class="hero-cta">
+                <a
+                  href="https://github.com/onza/DropSlim/releases/download/v1.0.0-beta.6/DropSlim_1.0.0-beta.6_aarch64.dmg"
+                  class="btn"
+                  data-release-download
+                  aria-label="Download DropSlim for macOS (DMG file)"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+                    />
+                  </svg>
+                  Download
+                </a>
+                <span class="hero-note">Apple Silicon</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-demo app-window" aria-hidden="true" data-queued="waiting">
+            <div class="app-titlebar">
+              <div class="app-traffic" aria-hidden="true">
+                <span class="app-traffic__btn app-traffic__btn--close"></span>
+                <span class="app-traffic__btn app-traffic__btn--minimize"></span>
+                <span class="app-traffic__btn app-traffic__btn--zoom"></span>
+              </div>
+              <div class="app-titlebar__drag" aria-hidden="true"></div>
+            </div>
+            <div class="app-window__body">
+              <div class="app-main">
+                <section class="app-dragzone">
+                  <h2>Drop images or folders here</h2>
+                  <strong>PNG, JPG, GIF, SVG, WebP and AVIF</strong>
+                </section>
+                <section class="app-result">
+                  <div class="demo-row queued" data-demo-row data-filename="screenshot-2026.png">
+                    <span class="demo-to" data-result="You saved 80% · 4.2 MB → 820 KB"
+                      >waiting</span
+                    >
+                    <span class="demo-path">screenshot-2026.min.png</span>
+                  </div>
+                  <div class="demo-row queued" data-demo-row data-filename="vacation-032.jpg">
+                    <span class="demo-to" data-result="You saved 83% · 8.1 MB → 1.4 MB"
+                      >waiting</span
+                    >
+                    <span class="demo-path">vacation-032.min.jpg</span>
+                  </div>
+                  <div class="demo-row queued" data-demo-row data-filename="animation.gif">
+                    <span class="demo-to" data-result="You saved 84% · 6.7 MB → 1.1 MB"
+                      >waiting</span
+                    >
+                    <span class="demo-path">animation.min.gif</span>
+                  </div>
+                  <div class="demo-row queued" data-filename="cover.avif">
+                    <span class="demo-to">waiting</span>
+                    <span class="demo-path">cover.min.avif</span>
+                  </div>
+                </section>
+              </div>
+              <footer class="app-footer">
+                <span class="app-settings-btn">Settings</span>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section pitch">
+        <div class="pitch-stat">
+          <span class="stat-value">
+            <span class="stat-num" data-count="80">0</span><span class="stat-unit">%</span>
+          </span>
+          <p>less volume (+/-)</p>
+        </div>
+        <div class="pitch-copy">
+          <h2>For everyone who sends &amp; uploads images.</h2>
+          <p>
+            Email attachment full? Notion slow? Slack complaining? Website maintenance? Uncompressed
+            graphics files are neither sustainable nor performant. DropSlim turns PNG, JPEG, GIF,
+            SVG, WebP and AVIF into sendable, web-ready files — without exporting anything in
+            Photoshop.
+          </p>
+        </div>
+      </section>
+      <section class="section list-section">
+        <h2>Why DropSlim.</h2>
+        <div class="tile-grid">
+          <div
+            class="compare-block glass-panel fat"
+            role="group"
+            aria-label="Before: 12.4 MB — 4 screenshots, one email, limit reached"
+          >
+            <span class="compare-label">before</span>
+            <span class="compare-value">12.4&nbsp;MB</span>
+            <span class="compare-desc">4 screenshots, one email — limit reached</span>
+          </div>
+          <div
+            class="compare-block glass-panel slim"
+            role="group"
+            aria-label="After: 2.1 MB — same content, plenty of room to spare"
+          >
+            <span class="compare-label">after</span>
+            <span class="compare-value">2.1&nbsp;MB</span>
+            <span class="compare-desc">same content, plenty of room to spare</span>
+          </div>
+          <ul class="feature-list">
+            <li class="feature-tile glass-panel">
+              <span class="li-num" aria-hidden="true">01</span>
+              <div>
+                <h3>Drag & Drop</h3>
+                <p>Drop files or folders onto the window. That is all you need.</p>
+              </div>
+            </li>
+            <li class="feature-tile glass-panel">
+              <span class="li-num" aria-hidden="true">02</span>
+              <div>
+                <h3>Small and fast</h3>
+                <p>Lightweight app, fast compression. Small footprint, no bloat.</p>
+              </div>
+            </li>
+            <li class="feature-tile glass-panel">
+              <span class="li-num" aria-hidden="true">03</span>
+              <div>
+                <h3>Runs offline</h3>
+                <p>No internet required. Compression runs entirely on your Mac.</p>
+              </div>
+            </li>
+            <li class="feature-tile glass-panel">
+              <span class="li-num" aria-hidden="true">04</span>
+              <div>
+                <h3>Privacy</h3>
+                <p>No upload. No tracking. Your photos never leave your machine.</p>
+              </div>
+            </li>
+            <li class="feature-tile glass-panel">
+              <span class="li-num" aria-hidden="true">05</span>
+              <div>
+                <h3>Batch processing</h3>
+                <p>200 screenshots? One go. Drop a folder, everything in one run.</p>
+              </div>
+            </li>
+            <li class="feature-tile glass-panel">
+              <span class="li-num" aria-hidden="true">06</span>
+              <div>
+                <h3>PNG · JPEG · GIF · SVG · WebP · AVIF</h3>
+                <p>
+                  All common image formats — presets for web, email, archive. Or your own quality.
+                </p>
+              </div>
+            </li>
+            <li class="feature-tile glass-panel">
+              <span class="li-num" aria-hidden="true">07</span>
+              <div>
+                <h3>Settings</h3>
+                <p>
+                  Overwrite, save alongside with a `.min` suffix, or to your own folder — you decide
+                  what happens.
+                </p>
+              </div>
+            </li>
+            <li class="feature-tile glass-panel">
+              <span class="li-num" aria-hidden="true">08</span>
+              <div>
+                <h3>Open Source</h3>
+                <p>
+                  MIT license. Source code on
+                  <a
+                    href="https://github.com/onza/DropSlim"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub<span class="visually-hidden"> (opens in new tab)</span></a
+                  >
+                  — inspectable, forkable, open to contributions.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="download" class="section download">
+        <h2>Get it.</h2>
+        <p>Free. No subscription. No ads. Open source under the MIT license.</p>
+        <a
+          href="https://github.com/onza/DropSlim/releases/download/v1.0.0-beta.6/DropSlim_1.0.0-beta.6_aarch64.dmg"
+          class="btn btn-large"
+          data-release-download
+          aria-label="Download DropSlim for macOS (DMG file)"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+            />
+          </svg>
+          Download for macOS
+        </a>
+        <p class="download-version">
+          Version <span data-release-version>1.0.0-beta.6</span> · Apple Silicon
+        </p>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-col">
+        <p class="footer-meta">
+          <span>Released under the </span>
+          <a href="https://github.com/onza/DropSlim/blob/main/LICENSE">MIT License</a>
+        </p>
+        <p class="footer-meta">
+          <span>© 2026</span>
+          <a href="https://www.websites-graphix.com/" target="_blank" rel="noopener noreferrer"
+            >Websites &amp; Graphix.<span class="visually-hidden"> (opens in new tab)</span></a
+          >
+          <span>All rights reserved.</span>
+        </p>
+      </div>
+      <nav class="footer-nav" aria-label="Legal">
+        <a href="legalnotice.html">Legal Notice</a>
+        <a href="privacypolicy.html">Privacy Policy</a>
+      </nav>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

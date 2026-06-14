@@ -1,0 +1,58 @@
+//
+// @Author: Martin Farkas
+// @Email:  info@websites-graphix.com
+//
+
+body {
+  font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.5;
+  letter-spacing: var(--tracking);
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text);
+}
+h1 {
+  font-size: clamp(1.5rem, 1.5rem + 1.5vw, 2.75rem);
+  letter-spacing: var(--tracking-tight);
+}
+h2 {
+  font-size: clamp(1.5rem, 1.5rem + 1.75vw, 3.5rem);
+  letter-spacing: var(--tracking-tight);
+}
+h3 {
+  font-size: var(--size-h3);
+  font-weight: 700;
+  letter-spacing: var(--tracking);
+}
+h4 {
+  font-size: var(--size-h4);
+  font-weight: 600;
+  letter-spacing: var(--tracking);
+}
+p {
+  color: var(--muted);
+  line-height: 1.65;
+  letter-spacing: var(--tracking);
+}
+ul,
+ol {
+  color: var(--muted);
+  line-height: 1.65;
+  letter-spacing: var(--tracking);
+}
+li {
+  line-height: 1.65;
+}
+strong {
+  font-weight: 700;
+}

@@ -1,0 +1,123 @@
+/** Production URL — override via SITE_URL env at build time (no trailing slash). */
+export const siteUrl = process.env.SITE_URL ?? 'https://dropslim.app'
+
+export const site = {
+  name: 'DropSlim',
+  author: 'Martin Farkas',
+  ogImage: 'dropslim-icon.png',
+  twitterCard: 'summary',
+}
+
+/** DropSlim app repo — download URL resolved at build time via GitHub API. */
+export const app = {
+  repo: 'onza/DropSlim',
+  fallback: {
+    tag: 'v1.0.0-beta.6',
+    version: '1.0.0-beta.6',
+    url: 'https://github.com/onza/DropSlim/releases/download/v1.0.0-beta.6/DropSlim_1.0.0-beta.6_aarch64.dmg',
+  },
+}
+
+/** @type {Record<string, import('./vite-plugins/seo.js').PageSeo>} */
+export const pages = {
+  'index.html': {
+    lang: 'de',
+    file: 'index.html',
+    title: 'DropSlim — Bilder klein machen auf dem Mac',
+    description:
+      'DropSlim komprimiert Bilder auf dem Mac — lokal, schnell, per Drag & Drop. Kein Account, kein Server, kostenlos und Open Source.',
+    keywords:
+      'DropSlim, Bildkompression, macOS, JPEG, PNG, WebP, Drag and Drop, Bilder verkleinern, Open Source',
+    robots: 'index, follow',
+    ogType: 'website',
+    ogLocale: 'de_DE',
+    ogLocaleAlternate: 'en_US',
+    hreflang: {
+      de: 'index.html',
+      en: 'en.html',
+      'x-default': 'index.html',
+    },
+    sitemap: true,
+    priority: 1,
+  },
+  'en.html': {
+    lang: 'en',
+    file: 'en.html',
+    title: 'DropSlim — Shrink Images on Your Mac',
+    description:
+      'DropSlim compresses images on your Mac — local, fast, drag & drop. No account, no server, free and open source.',
+    keywords:
+      'DropSlim, image compression, macOS, JPEG, PNG, WebP, drag and drop, shrink images, open source',
+    robots: 'index, follow',
+    ogType: 'website',
+    ogLocale: 'en_US',
+    ogLocaleAlternate: 'de_DE',
+    hreflang: {
+      de: 'index.html',
+      en: 'en.html',
+      'x-default': 'index.html',
+    },
+    sitemap: true,
+    priority: 1,
+  },
+  'impressum.html': {
+    lang: 'de',
+    file: 'impressum.html',
+    title: 'Impressum · DropSlim',
+    description: 'Impressum und Anbieterkennzeichnung der DropSlim Website.',
+    keywords: 'DropSlim, Impressum',
+    robots: 'noindex, follow',
+    ogType: 'website',
+    ogLocale: 'de_DE',
+    hreflang: {
+      de: 'impressum.html',
+      en: 'legalnotice.html',
+    },
+    sitemap: false,
+  },
+  'legalnotice.html': {
+    lang: 'en',
+    file: 'legalnotice.html',
+    title: 'Legal Notice · DropSlim',
+    description: 'Legal notice and provider information for the DropSlim website.',
+    keywords: 'DropSlim, legal notice',
+    robots: 'noindex, follow',
+    ogType: 'website',
+    ogLocale: 'en_US',
+    hreflang: {
+      de: 'impressum.html',
+      en: 'legalnotice.html',
+    },
+    sitemap: false,
+  },
+  'datenschutz.html': {
+    lang: 'de',
+    file: 'datenschutz.html',
+    title: 'Datenschutz · DropSlim',
+    description: 'Datenschutzerklärung der DropSlim Website.',
+    keywords: 'DropSlim, Datenschutz, DSGVO',
+    robots: 'noindex, follow',
+    ogType: 'website',
+    ogLocale: 'de_DE',
+    hreflang: {
+      de: 'datenschutz.html',
+      en: 'privacypolicy.html',
+    },
+    sitemap: false,
+  },
+  'privacypolicy.html': {
+    lang: 'en',
+    file: 'privacypolicy.html',
+    title: 'Privacy Policy · DropSlim',
+    description: 'Privacy policy for the DropSlim website.',
+    keywords: 'DropSlim, privacy policy, GDPR',
+    robots: 'noindex, follow',
+    ogType: 'website',
+    ogLocale: 'en_US',
+    hreflang: {
+      de: 'datenschutz.html',
+      en: 'privacypolicy.html',
+    },
+    sitemap: false,
+  },
+}

@@ -1,0 +1,43 @@
+//
+// @Author: Martin Farkas
+// @Email:  info@websites-graphix.com
+//
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: var(--size-ui);
+  letter-spacing: var(--tracking-wide);
+  padding: 0.75rem 1.375rem;
+  background: var(--text);
+  color: var(--bg);
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition:
+    opacity 0.15s,
+    transform 0.1s;
+  &:hover {
+    opacity: 0.9;
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+  &:has(> svg) {
+    gap: 0.5em;
+    align-items: center;
+    line-height: 1;
+  }
+  > svg {
+    display: block;
+    flex-shrink: 0;
+    transform: translateY(-0.06em);
+  }
+}
+.btn-large {
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  padding: 0.875rem 2rem;
+  margin-top: 0.5rem;
+}

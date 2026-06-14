@@ -1,0 +1,23 @@
+//
+// @Author: Martin Farkas
+// @Email:  info@websites-graphix.com
+//
+
+.download {
+  text-align: center;
+  h2 {
+    margin-bottom: 0.75rem;
+  }
+  p {
+    font-size: var(--size-body-lg);
+    margin-bottom: 2rem;
+  }
+  .download-version {
+    font-family: var(--mono);
+    font-size: var(--size-label);
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+}
