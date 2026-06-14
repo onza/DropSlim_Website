@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
+import { copyFileSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { seoPlugin } from './vite-plugins/seo.js'
 import { releasePlugin } from './vite-plugins/release.js'
@@ -20,6 +20,8 @@ function bundleMinJs() {
       }
     },
     closeBundle() {
+      copyFileSync(resolve(__dirname, 'LICENSE'), resolve(distDir, 'LICENSE'))
+
       for (const file of readdirSync(distDir).filter((name) => name.endsWith('.html'))) {
         const path = resolve(distDir, file)
         let html = readFileSync(path, 'utf8')
