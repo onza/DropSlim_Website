@@ -2,6 +2,11 @@ name: Deploy Coming Soon (GitHub Pages)
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'coming-soon/**'
+      - '.github/workflows/deploy-coming-soon.yml'
 
 permissions:
   contents: read
