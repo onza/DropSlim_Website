@@ -17,7 +17,7 @@
   letter-spacing: 0.04em;
   color: var(--muted);
 }
-:is(.demo-row, .pitch-stat p, .li-num, .footer-meta) {
+:is(.dragzone-status, .demo-row, .pitch-stat p, .li-num, .footer-meta) {
   letter-spacing: normal;
 }
 .glass-panel {

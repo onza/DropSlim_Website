@@ -121,22 +121,83 @@
     transition: opacity 0.2s ease;
     background: var(--app-processing);
   }
+  &.is--processing::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin: -1rem 0 0 -1rem;
+    border: 2px solid hsl(210 100% 52% / 0.2);
+    border-top-color: var(--app-accent);
+    border-radius: 50%;
+    animation: demo-spin 0.8s linear infinite;
+  }
   &.is--processing::after {
     opacity: 1;
-    background-image: radial-gradient(circle, hsl(210 100% 52% / 0.35) 0%, transparent 70%);
-    animation: demo-pulse 1.2s ease-in-out infinite;
   }
 }
-@keyframes demo-pulse {
-  50% {
-    opacity: 0.55;
+@keyframes demo-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.dragzone-status {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--app-accent);
+  &[hidden] {
+    display: none;
+  }
+}
+.hero-demo.is-intro {
+  .results-panel {
+    flex: 0;
+    min-height: 0;
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    pointer-events: none;
+  }
+}
+.results-panel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  padding-top: 0.75rem;
+  transition:
+    opacity 0.35s ease,
+    padding 0.35s ease;
+}
+.batch-summary {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0.5rem 0.25rem 0.75rem;
+  border-bottom: 1px solid var(--app-border);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--app-text);
+  &[hidden] {
+    display: none;
   }
 }
 .app-result {
   flex: 1;
   min-height: 0;
-  overflow: hidden;
-  padding-top: 0.75rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 .demo-row {
   padding: 1rem 0.25rem;
@@ -190,11 +251,29 @@
   display: block;
 }
 .app-footer {
+  display: flex;
   flex-shrink: 0;
+  justify-content: center;
   padding-top: 0.75rem;
-  text-align: center;
 }
-.app-settings-btn {
+.app-footer__group {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+.demo-cancel[hidden] {
+  display: none;
+}
+.text-btn {
+  appearance: none;
+  margin: 0;
+  padding: 0.35rem 0.75rem;
+  border: 0;
+  background: transparent;
+  font: inherit;
   font-size: 0.75rem;
+  line-height: 1;
   color: var(--app-accent);
+  cursor: default;
+  pointer-events: none;
 }

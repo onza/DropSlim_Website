@@ -76,7 +76,7 @@
               </div>
             </div>
           </div>
-          <div class="hero-demo app-window" aria-hidden="true" data-queued="waiting">
+          <div class="hero-demo app-window is-intro" aria-hidden="true" data-queued="waiting">
             <div class="app-titlebar">
               <div class="app-traffic" aria-hidden="true">
                 <span class="app-traffic__btn app-traffic__btn--close"></span>
@@ -88,36 +88,45 @@
             <div class="app-window__body">
               <div class="app-main">
                 <section class="app-dragzone">
+                  <p class="dragzone-status" hidden></p>
                   <h2>Drop images or folders here</h2>
                   <strong>PNG, JPG, GIF, SVG, WebP and AVIF</strong>
                 </section>
-                <section class="app-result">
-                  <div class="demo-row queued" data-demo-row data-filename="screenshot-2026.png">
-                    <span class="demo-to" data-result="You saved 80% · 4.2 MB → 820 KB"
-                      >waiting</span
-                    >
-                    <span class="demo-path">screenshot-2026.min.png</span>
-                  </div>
-                  <div class="demo-row queued" data-demo-row data-filename="vacation-032.jpg">
-                    <span class="demo-to" data-result="You saved 83% · 8.1 MB → 1.4 MB"
-                      >waiting</span
-                    >
-                    <span class="demo-path">vacation-032.min.jpg</span>
-                  </div>
-                  <div class="demo-row queued" data-demo-row data-filename="animation.gif">
-                    <span class="demo-to" data-result="You saved 84% · 6.7 MB → 1.1 MB"
-                      >waiting</span
-                    >
-                    <span class="demo-path">animation.min.gif</span>
-                  </div>
-                  <div class="demo-row queued" data-filename="cover.avif">
-                    <span class="demo-to">waiting</span>
-                    <span class="demo-path">cover.min.avif</span>
-                  </div>
-                </section>
+                <div class="results-panel">
+                  <p class="batch-summary" hidden></p>
+                  <section class="app-result">
+                    <div class="demo-row queued" data-demo-row data-filename="screenshot-2026.png">
+                      <span class="demo-to" data-result="You saved 80% · 4.2 MB → 820 KB"
+                        >waiting</span
+                      >
+                      <span class="demo-path">screenshot-2026.min.png</span>
+                    </div>
+                    <div class="demo-row queued" data-demo-row data-filename="vacation-032.jpg">
+                      <span class="demo-to" data-result="You saved 83% · 8.1 MB → 1.4 MB"
+                        >waiting</span
+                      >
+                      <span class="demo-path">vacation-032.min.jpg</span>
+                    </div>
+                    <div class="demo-row queued" data-demo-row data-filename="animation.gif">
+                      <span class="demo-to" data-result="You saved 84% · 6.7 MB → 1.1 MB"
+                        >waiting</span
+                      >
+                      <span class="demo-path">animation.min.gif</span>
+                    </div>
+                    <div class="demo-row queued" data-demo-row data-filename="cover.avif">
+                      <span class="demo-to" data-result="You saved 84% · 2.5 MB → 400 KB"
+                        >waiting</span
+                      >
+                      <span class="demo-path">cover.min.avif</span>
+                    </div>
+                  </section>
+                </div>
               </div>
               <footer class="app-footer">
-                <span class="app-settings-btn">Settings</span>
+                <div class="app-footer__group">
+                  <button type="button" class="demo-cancel text-btn" hidden>Cancel</button>
+                  <button type="button" class="text-btn app-settings-btn">Settings</button>
+                </div>
               </footer>
             </div>
           </div>
