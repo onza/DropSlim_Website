@@ -9,7 +9,7 @@
     grid-template-columns: 1fr;
     align-items: center;
     @media (min-width: 840px) {
-      grid-template-columns: minmax(0, 1fr) 340px;
+      grid-template-columns: minmax(0, 1fr) 400px;
       column-gap: clamp(2rem, 4vw, 3.5rem);
     }
   }
@@ -65,13 +65,13 @@
     justify-self: center;
     margin-top: 2.5rem;
     &.app-window {
-      width: min(340px, 100%);
+      width: min(400px, 100%);
     }
     @media (min-width: 840px) {
       justify-self: end;
       margin-top: 0;
       &.app-window {
-        width: 340px;
+        width: 400px;
       }
     }
   }

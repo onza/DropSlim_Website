@@ -9,8 +9,8 @@
   }
 }
 .app-window {
-  width: 340px;
-  height: 550px;
+  width: 400px;
+  height: 600px;
   flex-shrink: 0;
   --app-text: #f5f5f7;
   --app-text-rgb: 245 245 247;
@@ -119,29 +119,12 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease;
-    background: var(--app-processing);
-  }
-  &.is--processing::before {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: -1rem 0 0 -1rem;
-    border: 2px solid hsl(210 100% 52% / 0.2);
-    border-top-color: var(--app-accent);
-    border-radius: 50%;
-    animation: demo-spin 0.8s linear infinite;
+    background: var(--app-processing) url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzgiIGhlaWdodD0iMzgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgeDE9IjguMDQyJSIgeTE9IjAlIiB4Mj0iNjUuNjgyJSIgeTI9IjIzLjg2NSUiIGlkPSJhIj4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzAwN2FmZiIgc3RvcC1vcGFjaXR5PSIwIiBvZmZzZXQ9IjAlIiAvPgogICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjMDA3YWZmIiBzdG9wLW9wYWNpdHk9Ii42MzEiIG9mZnNldD0iNjMuMTQ2JSIgLz4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzAwN2FmZiIgb2Zmc2V0PSIxMDAlIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAxKSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgIDxwYXRoIGQ9Ik0zNiAxOGMwLTkuOTQtOC4wNi0xOC0xOC0xOCIgc3Ryb2tlPSJ1cmwoI2EpIiBzdHJva2Utd2lkdGg9IjIiPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0icm90YXRlIiBmcm9tPSIwIDE4IDE4IiB0bz0iMzYwIDE4IDE4IiBkdXI9IjAuOXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPjwvcGF0aD4KICAgIDxjaXJjbGUgZmlsbD0iIzAwN2FmZiIgY3g9IjM2IiBjeT0iMTgiIHI9IjEiPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0icm90YXRlIiBmcm9tPSIwIDE4IDE4IiB0bz0iMzYwIDE4IDE4IiBkdXI9IjAuOXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPjwvY2lyY2xlPgogIDwvZz4KPC9zdmc+')
+      no-repeat center center;
+    background-size: 15%;
   }
   &.is--processing::after {
     opacity: 1;
-  }
-}
-@keyframes demo-spin {
-  to {
-    transform: rotate(360deg);
   }
 }
 .dragzone-status {
