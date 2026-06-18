@@ -12,9 +12,9 @@ export const site = {
 export const app = {
   repo: 'onza/DropSlim',
   fallback: {
-    tag: 'v1.0.0-beta.6',
-    version: '1.0.0-beta.6',
-    url: 'https://github.com/onza/DropSlim/releases/download/v1.0.0-beta.6/DropSlim_1.0.0-beta.6_aarch64.dmg',
+    tag: 'v1.1.0',
+    version: '1.1.0',
+    url: 'https://github.com/onza/DropSlim/releases/download/v1.1.0/DropSlim_1.1.0_aarch64.dmg',
   },
 }
 
@@ -27,7 +27,7 @@ export const pages = {
     description:
       'DropSlim komprimiert Bilder auf dem Mac — lokal, schnell, per Drag & Drop. Kein Account, kein Server, kostenlos und Open Source.',
     keywords:
-      'DropSlim, Bildkompression, macOS, JPEG, PNG, WebP, Drag and Drop, Bilder verkleinern, Open Source',
+      'DropSlim, Bildkompression, macOS, JPEG, PNG, WebP, HEIC, AVIF, Drag and Drop, Bilder verkleinern, Open Source',
     robots: 'index, follow',
     ogType: 'website',
     ogLocale: 'de_DE',
@@ -47,7 +47,7 @@ export const pages = {
     description:
       'DropSlim compresses images on your Mac — local, fast, drag & drop. No account, no server, free and open source.',
     keywords:
-      'DropSlim, image compression, macOS, JPEG, PNG, WebP, drag and drop, shrink images, open source',
+      'DropSlim, image compression, macOS, JPEG, PNG, WebP, HEIC, AVIF, drag and drop, shrink images, open source',
     robots: 'index, follow',
     ogType: 'website',
     ogLocale: 'en_US',
