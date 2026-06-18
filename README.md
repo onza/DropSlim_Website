@@ -1,6 +1,6 @@
 # DropSlim Website
 
-Static marketing website for [DropSlim](https://github.com/onza/DropSlim).
+Static marketing website for [DropSlim](https://dropslim.app).
 
 ## License
 
