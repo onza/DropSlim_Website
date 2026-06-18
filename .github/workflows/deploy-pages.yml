@@ -33,7 +33,7 @@ jobs:
 
       - name: Build
         env:
-          SITE_URL: https://onza.github.io/DropSlim_Website
+          SITE_URL: https://dropslim.app
           APP_RELEASE_TAG: ${{ github.event.client_payload.tag || '' }}
         run: npm run build
 
