@@ -5,6 +5,7 @@ import { seoPlugin } from './vite-plugins/seo.js'
 import { releasePlugin } from './vite-plugins/release.js'
 
 const distDir = resolve(__dirname, 'dist')
+const cssTag = '    <link rel="stylesheet" crossorigin href="./assets/styles.min.css" />\n'
 const scriptTag = '    <script type="module" crossorigin src="./bundle.min.js"></script>\n'
 
 function bundleMinJs() {
@@ -13,10 +14,17 @@ function bundleMinJs() {
     apply: 'build',
     generateBundle(_, bundle) {
       for (const [key, item] of Object.entries(bundle)) {
-        if (item.type !== 'chunk' || !key.endsWith('.js')) continue
-        item.fileName = 'bundle.min.js'
-        bundle['bundle.min.js'] = item
-        if (key !== 'bundle.min.js') delete bundle[key]
+        if (item.type === 'chunk' && key.endsWith('.js')) {
+          item.fileName = 'bundle.min.js'
+          bundle['bundle.min.js'] = item
+          if (key !== 'bundle.min.js') delete bundle[key]
+          continue
+        }
+        if (item.type === 'asset' && item.fileName?.endsWith('.css')) {
+          item.fileName = 'assets/styles.min.css'
+          bundle['assets/styles.min.css'] = item
+          if (key !== 'assets/styles.min.css') delete bundle[key]
+        }
       }
     },
     closeBundle() {
@@ -25,7 +33,9 @@ function bundleMinJs() {
       for (const file of readdirSync(distDir).filter((name) => name.endsWith('.html'))) {
         const path = resolve(distDir, file)
         let html = readFileSync(path, 'utf8')
+        html = html.replace(/<link rel="stylesheet"[^>]*>\s*/g, '')
         html = html.replace(/<script type="module"[^>]*><\/script>\s*/g, '')
+        html = html.replace(/<\/head>/, `\n${cssTag}  </head>`)
         html = html.replace(/\s*<\/body>/, `\n${scriptTag}  </body>`)
         writeFileSync(path, html)
       }
