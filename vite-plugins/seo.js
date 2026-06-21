@@ -29,7 +29,9 @@ function escapeAttr(value) {
 }
 
 function absUrl(path) {
-  return `${siteUrl.replace(/\/$/, '')}/${path}`
+  const base = siteUrl.replace(/\/$/, '')
+  if (path === 'index.html') return `${base}/`
+  return `${base}/${path}`
 }
 
 /** @param {PageSeo} page */

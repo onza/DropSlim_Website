@@ -12,9 +12,9 @@ export const site = {
 export const app = {
   repo: 'onza/DropSlim',
   fallback: {
-    tag: 'v1.1.0',
-    version: '1.1.0',
-    url: 'https://github.com/onza/DropSlim/releases/download/v1.1.0/DropSlim_1.1.0_aarch64.dmg',
+    tag: 'v1.2.1',
+    version: '1.2.1',
+    url: 'https://github.com/onza/DropSlim/releases/download/v1.2.1/DropSlim_1.2.1_aarch64.dmg',
   },
 }
 
