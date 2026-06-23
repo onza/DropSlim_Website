@@ -1,4 +1,3 @@
-/** Production URL — override via SITE_URL env at build time (no trailing slash). */
 export const siteUrl = process.env.SITE_URL ?? 'https://dropslim.app'
 
 export const site = {
@@ -8,7 +7,6 @@ export const site = {
   twitterCard: 'summary',
 }
 
-/** DropSlim app repo — download URL resolved at build time via GitHub API. */
 export const app = {
   repo: 'onza/DropSlim',
   fallback: {
@@ -18,7 +16,6 @@ export const app = {
   },
 }
 
-/** @type {Record<string, import('./vite-plugins/seo.js').PageSeo>} */
 export const pages = {
   'index.html': {
     lang: 'de',
@@ -71,13 +68,13 @@ export const pages = {
     ogLocale: 'de_DE',
     hreflang: {
       de: 'impressum/index.html',
-      en: 'legalnotice/index.html',
+      en: 'en/legalnotice/index.html',
     },
     sitemap: false,
   },
-  'legalnotice/index.html': {
+  'en/legalnotice/index.html': {
     lang: 'en',
-    file: 'legalnotice/index.html',
+    file: 'en/legalnotice/index.html',
     title: 'Legal Notice · DropSlim',
     description: 'Legal notice and provider information for the DropSlim website.',
     keywords: 'DropSlim, legal notice',
@@ -86,7 +83,7 @@ export const pages = {
     ogLocale: 'en_US',
     hreflang: {
       de: 'impressum/index.html',
-      en: 'legalnotice/index.html',
+      en: 'en/legalnotice/index.html',
     },
     sitemap: false,
   },
@@ -101,13 +98,13 @@ export const pages = {
     ogLocale: 'de_DE',
     hreflang: {
       de: 'datenschutz/index.html',
-      en: 'privacypolicy/index.html',
+      en: 'en/privacypolicy/index.html',
     },
     sitemap: false,
   },
-  'privacypolicy/index.html': {
+  'en/privacypolicy/index.html': {
     lang: 'en',
-    file: 'privacypolicy/index.html',
+    file: 'en/privacypolicy/index.html',
     title: 'Privacy Policy · DropSlim',
     description: 'Privacy policy for the DropSlim website.',
     keywords: 'DropSlim, privacy policy, GDPR',
@@ -116,7 +113,7 @@ export const pages = {
     ogLocale: 'en_US',
     hreflang: {
       de: 'datenschutz/index.html',
-      en: 'privacypolicy/index.html',
+      en: 'en/privacypolicy/index.html',
     },
     sitemap: false,
   },
