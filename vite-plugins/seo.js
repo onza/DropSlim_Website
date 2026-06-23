@@ -33,6 +33,12 @@ function absUrl(path) {
   return pageAbsUrl(siteUrl, path)
 }
 
+function renderCanonicalRedirect() {
+  const origin = siteUrl.replace(/\/$/, '')
+  const apex = new URL(origin).hostname
+  return `    <script>(function(){var a="${apex}",h=location.hostname,o="${origin}";if(h!==a&&h!=="www."+a)return;if(h==="www."+a||location.protocol==="http:")location.replace(o+location.pathname+location.search+location.hash)})()</script>\n`
+}
+
 /** @param {PageSeo} page */
 function renderSeoBlock(page) {
   const canonical = absUrl(page.file)
@@ -131,6 +137,8 @@ export function seoPlugin() {
       if (!page) return html
 
       let out = html
+
+      out = out.replace(/<head>/, `<head>\n${renderCanonicalRedirect()}`)
 
       if (out.includes(SEO_MARKER)) {
         out = out.replace(`    ${SEO_MARKER}`, renderSeoBlock(page))
