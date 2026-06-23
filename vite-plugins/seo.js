@@ -1,5 +1,6 @@
 import { writeFileSync } from 'node:fs'
-import { basename, resolve } from 'node:path'
+import { relative, resolve } from 'node:path'
+import { pageAbsUrl } from '../lib/page-path.js'
 import { pages, site, siteUrl } from '../site.config.js'
 
 const SEO_MARKER = '<!-- seo -->'
@@ -29,9 +30,7 @@ function escapeAttr(value) {
 }
 
 function absUrl(path) {
-  const base = siteUrl.replace(/\/$/, '')
-  if (path === 'index.html') return `${base}/`
-  return `${base}/${path}`
+  return pageAbsUrl(siteUrl, path)
 }
 
 /** @param {PageSeo} page */
@@ -117,14 +116,17 @@ ${urls}
 export function seoPlugin() {
   /** @type {string} */
   let outDir = 'dist'
+  /** @type {string} */
+  let root = process.cwd()
 
   return {
     name: 'seo',
     configResolved(config) {
+      root = config.root
       outDir = resolve(config.root, config.build.outDir)
     },
     transformIndexHtml(html, ctx) {
-      const file = basename(ctx.filename)
+      const file = relative(root, ctx.filename).replace(/\\/g, '/')
       const page = pages[file]
       if (!page) return html
 

@@ -34,15 +34,15 @@ export const pages = {
     ogLocaleAlternate: 'en_US',
     hreflang: {
       de: 'index.html',
-      en: 'en.html',
+      en: 'en/index.html',
       'x-default': 'index.html',
     },
     sitemap: true,
     priority: 1,
   },
-  'en.html': {
+  'en/index.html': {
     lang: 'en',
-    file: 'en.html',
+    file: 'en/index.html',
     title: 'DropSlim — Shrink Images on Your Mac',
     description:
       'DropSlim compresses images on your Mac — local, fast, drag & drop. No account, no server, free and open source.',
@@ -54,15 +54,15 @@ export const pages = {
     ogLocaleAlternate: 'de_DE',
     hreflang: {
       de: 'index.html',
-      en: 'en.html',
+      en: 'en/index.html',
       'x-default': 'index.html',
     },
     sitemap: true,
     priority: 1,
   },
-  'impressum.html': {
+  'impressum/index.html': {
     lang: 'de',
-    file: 'impressum.html',
+    file: 'impressum/index.html',
     title: 'Impressum · DropSlim',
     description: 'Impressum und Anbieterkennzeichnung der DropSlim Website.',
     keywords: 'DropSlim, Impressum',
@@ -70,14 +70,14 @@ export const pages = {
     ogType: 'website',
     ogLocale: 'de_DE',
     hreflang: {
-      de: 'impressum.html',
-      en: 'legalnotice.html',
+      de: 'impressum/index.html',
+      en: 'legalnotice/index.html',
     },
     sitemap: false,
   },
-  'legalnotice.html': {
+  'legalnotice/index.html': {
     lang: 'en',
-    file: 'legalnotice.html',
+    file: 'legalnotice/index.html',
     title: 'Legal Notice · DropSlim',
     description: 'Legal notice and provider information for the DropSlim website.',
     keywords: 'DropSlim, legal notice',
@@ -85,14 +85,14 @@ export const pages = {
     ogType: 'website',
     ogLocale: 'en_US',
     hreflang: {
-      de: 'impressum.html',
-      en: 'legalnotice.html',
+      de: 'impressum/index.html',
+      en: 'legalnotice/index.html',
     },
     sitemap: false,
   },
-  'datenschutz.html': {
+  'datenschutz/index.html': {
     lang: 'de',
-    file: 'datenschutz.html',
+    file: 'datenschutz/index.html',
     title: 'Datenschutz · DropSlim',
     description: 'Datenschutzerklärung der DropSlim Website.',
     keywords: 'DropSlim, Datenschutz, DSGVO',
@@ -100,14 +100,14 @@ export const pages = {
     ogType: 'website',
     ogLocale: 'de_DE',
     hreflang: {
-      de: 'datenschutz.html',
-      en: 'privacypolicy.html',
+      de: 'datenschutz/index.html',
+      en: 'privacypolicy/index.html',
     },
     sitemap: false,
   },
-  'privacypolicy.html': {
+  'privacypolicy/index.html': {
     lang: 'en',
-    file: 'privacypolicy.html',
+    file: 'privacypolicy/index.html',
     title: 'Privacy Policy · DropSlim',
     description: 'Privacy policy for the DropSlim website.',
     keywords: 'DropSlim, privacy policy, GDPR',
@@ -115,8 +115,8 @@ export const pages = {
     ogType: 'website',
     ogLocale: 'en_US',
     hreflang: {
-      de: 'datenschutz.html',
-      en: 'privacypolicy.html',
+      de: 'datenschutz/index.html',
+      en: 'privacypolicy/index.html',
     },
     sitemap: false,
   },

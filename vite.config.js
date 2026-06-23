@@ -1,15 +1,19 @@
 import { defineConfig } from 'vite'
-import { copyFileSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
-import { resolve } from 'node:path'
-import { seoPlugin } from './vite-plugins/seo.js'
+import { copyFileSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs'
+import { join, resolve } from 'node:path'
 import { releasePlugin } from './vite-plugins/release.js'
+import { seoPlugin } from './vite-plugins/seo.js'
 
-const distDir = resolve(__dirname, 'dist')
-const preloadTags =
-  '    <link rel="preload" href="./assets/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin />\n' +
-  '    <link rel="preload" href="./assets/ibm-plex-mono-400.woff2" as="font" type="font/woff2" crossorigin />\n'
-const cssTag = '    <link rel="stylesheet" crossorigin href="./assets/styles.min.css" />\n'
-const scriptTag = '    <script type="module" crossorigin src="./bundle.min.js"></script>\n'
+function walkHtml(dir) {
+  /** @type {string[]} */
+  const files = []
+  for (const name of readdirSync(dir)) {
+    const path = join(dir, name)
+    if (statSync(path).isDirectory()) files.push(...walkHtml(path))
+    else if (name.endsWith('.html')) files.push(path)
+  }
+  return files
+}
 
 const stableAssets = {
   'bricolage-grotesque': 'assets/bricolage-grotesque.woff2',
@@ -25,9 +29,21 @@ function renameStableAsset(bundle, key, item, match) {
 }
 
 function bundleMinJs() {
+  /** @type {string} */
+  let outDir = 'dist'
+
+  const preloadTags =
+    '    <link rel="preload" href="/assets/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin />\n' +
+    '    <link rel="preload" href="/assets/ibm-plex-mono-400.woff2" as="font" type="font/woff2" crossorigin />\n'
+  const cssTag = '    <link rel="stylesheet" crossorigin href="/assets/styles.min.css" />\n'
+  const scriptTag = '    <script type="module" crossorigin src="/bundle.min.js"></script>\n'
+
   return {
     name: 'bundle-min-js',
     apply: 'build',
+    configResolved(config) {
+      outDir = resolve(config.root, config.build.outDir)
+    },
     generateBundle(_, bundle) {
       for (const [key, item] of Object.entries(bundle)) {
         if (item.type === 'chunk' && key.endsWith('.js')) {
@@ -53,30 +69,30 @@ function bundleMinJs() {
       }
     },
     closeBundle() {
+      const distDir = resolve(outDir)
       copyFileSync(resolve(__dirname, 'LICENSE'), resolve(distDir, 'LICENSE'))
 
-      const cssPath = resolve(distDir, 'assets/styles.min.css')
+      const cssPath = join(distDir, 'assets/styles.min.css')
       let css = readFileSync(cssPath, 'utf8')
       css = css.replace(/bricolage-grotesque-[a-zA-Z0-9_.-]+\.woff2/g, 'bricolage-grotesque.woff2')
       css = css.replace(/ibm-plex-mono-400-[a-zA-Z0-9_.-]+\.woff2/g, 'ibm-plex-mono-400.woff2')
       writeFileSync(cssPath, css)
 
-      for (const file of readdirSync(distDir).filter((name) => name.endsWith('.html'))) {
-        const path = resolve(distDir, file)
-        let html = readFileSync(path, 'utf8')
+      for (const htmlPath of walkHtml(distDir)) {
+        let html = readFileSync(htmlPath, 'utf8')
         html = html.replace(/<link rel="preload"[^>]*>\s*/g, '')
         html = html.replace(/<link rel="stylesheet"[^>]*>\s*/g, '')
         html = html.replace(/<script type="module"[^>]*><\/script>\s*/g, '')
         html = html.replace(/<\/head>/, `\n${preloadTags}${cssTag}  </head>`)
         html = html.replace(/\s*<\/body>/, `\n${scriptTag}  </body>`)
-        writeFileSync(path, html)
+        writeFileSync(htmlPath, html)
       }
     },
   }
 }
 
 export default defineConfig({
-  base: './',
+  base: '/',
   plugins: [releasePlugin(), seoPlugin(), bundleMinJs()],
   build: {
     outDir: 'dist',
@@ -85,11 +101,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        en: resolve(__dirname, 'en.html'),
-        impressum: resolve(__dirname, 'impressum.html'),
-        datenschutz: resolve(__dirname, 'datenschutz.html'),
-        legalnotice: resolve(__dirname, 'legalnotice.html'),
-        privacypolicy: resolve(__dirname, 'privacypolicy.html'),
+        en: resolve(__dirname, 'en/index.html'),
+        impressum: resolve(__dirname, 'impressum/index.html'),
+        datenschutz: resolve(__dirname, 'datenschutz/index.html'),
+        legalnotice: resolve(__dirname, 'legalnotice/index.html'),
+        privacypolicy: resolve(__dirname, 'privacypolicy/index.html'),
       },
     },
   },

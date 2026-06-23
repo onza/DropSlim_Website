@@ -1,8 +1,8 @@
-import { basename } from 'node:path'
+import { relative } from 'node:path'
 import { app } from '../site.config.js'
 import { resolveRelease } from '../lib/resolve-release.js'
 
-const RELEASE_PAGES = new Set(['index.html', 'en.html'])
+const RELEASE_PAGES = new Set(['index.html', 'en/index.html'])
 
 function escapeAttr(value) {
   return value
@@ -30,6 +30,8 @@ function injectRelease(html, release) {
 export function releasePlugin() {
   /** @type {Promise<import('../lib/resolve-release.js').AppRelease> | null} */
   let releasePromise = null
+  /** @type {string} */
+  let root = process.cwd()
 
   function loadRelease() {
     if (!releasePromise) {
@@ -43,11 +45,14 @@ export function releasePlugin() {
 
   return {
     name: 'release',
+    configResolved(config) {
+      root = config.root
+    },
     buildStart() {
       loadRelease()
     },
     async transformIndexHtml(html, ctx) {
-      const file = basename(ctx.filename)
+      const file = relative(root, ctx.filename).replace(/\\/g, '/')
       if (!RELEASE_PAGES.has(file)) return html
       const release = await loadRelease()
       return injectRelease(html, release)
