@@ -11,10 +11,8 @@ export default [
   {
     files: [
       'src/**/*.js',
-      'lib/**/*.js',
-      'vite.config.js',
-      'vite-plugins/**/*.js',
-      'site.config.js',
+      'scripts/**/*.mjs',
+      'eleventy.config.js',
       'eslint.config.js',
       'stylelint.config.js',
     ],

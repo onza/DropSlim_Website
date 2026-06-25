@@ -27,5 +27,12 @@
   "eslint.validate": ["javascript"],
   "stylelint.validate": ["css", "scss"],
   "css.validate": false,
-  "scss.validate": false
+  "scss.validate": false,
+  "yaml.schemas": {
+    "./schemas/site.schema.json": "locales/**/site.yaml"
+  },
+  "ansible.validation.enabled": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

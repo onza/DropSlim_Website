@@ -1,8 +1,3 @@
-//
-// @Author: Martin Farkas
-// @Email:  info@websites-graphix.com
-//
-
 export function initCounter() {
   const statEl = document.querySelector('[data-count]')
   if (!statEl) return

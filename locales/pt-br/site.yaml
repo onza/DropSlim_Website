@@ -1,0 +1,53 @@
+seo:
+  home:
+    title: DropSlim — Reduza imagens no seu Mac
+    description: O DropSlim comprime imagens no seu Mac — local, rápido, arrastar e soltar. Sem conta, sem servidor, grátis e open source.
+    keywords: DropSlim, compressão de imagens, macOS, JPEG, PNG, WebP, HEIC, AVIF, arrastar e soltar, reduzir imagens, open source
+  legalNotice:
+    title: Aviso legal · DropSlim
+    description: Aviso legal e informações do provedor do site DropSlim.
+    keywords: DropSlim, aviso legal
+  privacy:
+    title: Política de privacidade · DropSlim
+    description: Política de privacidade do site DropSlim.
+    keywords: DropSlim, política de privacidade, LGPD, GDPR
+strings:
+  skipToContent: Pular para o conteúdo
+  mainNavigation: Navegação principal
+  language: Idioma
+  githubAria: DropSlim no GitHub (abre em uma nova aba)
+  download: Baixar
+  appleSilicon: Apple Silicon
+  demoDropzone: Solte imagens ou pastas aqui
+  demoFormats: PNG, JPG, GIF, SVG, WebP, HEIC e AVIF
+  waiting: aguardando
+  cancel: Cancelar
+  settingsHeading: Configurações
+  getIt: Baixe agora.
+  downloadIntro: Grátis. Sem assinatura. Sem anúncios. Open source sob licença MIT.
+  downloadForMacos: Baixar para macOS
+  downloadVersion: Version <span data-release-version="">1.2.1</span> · Apple Silicon
+  releasedUnder: Publicado sob a
+  mitLicense: Licença MIT
+  allRightsReserved: Todos os direitos reservados.
+  opensInNewTab: (abre em uma nova aba)
+  legalAria: Informações legais
+  legalNotice: Aviso legal
+  privacyPolicy: Política de privacidade
+demo:
+  queued: aguardando
+  rows:
+    - filename: screenshot-2026.png
+      result: Você economizou 80% · 4,2 MB → 820 KB
+      output: screenshot-2026.min.png
+    - filename: vacation-032.jpg
+      result: Você economizou 83% · 8,1 MB → 1,4 MB
+      output: vacation-032.min.jpg
+    - filename: animation.gif
+      result: Você economizou 84% · 6,7 MB → 1,1 MB
+      output: animation.min.gif
+    - filename: cover.avif
+      result: Você economizou 84% · 2,5 MB → 400 KB
+      output: cover.min.avif
+  compressing: Comprimindo %s…
+  summary: 4 imagens · 17,8 MB economizados (83%)

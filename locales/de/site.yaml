@@ -1,0 +1,53 @@
+seo:
+  home:
+    title: DropSlim — Bilder klein machen auf dem Mac
+    description: DropSlim komprimiert Bilder auf dem Mac — lokal, schnell, per Drag & Drop. Kein Account, kein Server, kostenlos und Open Source.
+    keywords: DropSlim, Bildkompression, macOS, JPEG, PNG, WebP, HEIC, AVIF, Drag and Drop, Bilder verkleinern, Open Source
+  legalNotice:
+    title: Impressum · DropSlim
+    description: Impressum und Anbieterkennzeichnung der DropSlim Website.
+    keywords: DropSlim, Impressum
+  privacy:
+    title: Datenschutz · DropSlim
+    description: Datenschutzerklärung der DropSlim Website.
+    keywords: DropSlim, Datenschutz, DSGVO
+strings:
+  skipToContent: Zum Inhalt springen
+  mainNavigation: Hauptnavigation
+  language: Sprache
+  githubAria: DropSlim auf GitHub (öffnet in neuem Tab)
+  download: Download
+  appleSilicon: Apple Silicon
+  demoDropzone: Bilder oder Ordner hier ablegen
+  demoFormats: PNG, JPG, GIF, SVG, WebP, HEIC und AVIF
+  waiting: wartet
+  cancel: Abbrechen
+  settingsHeading: Einstellungen
+  getIt: Hol's dir.
+  downloadIntro: Kostenlos. Kein Abo. Keine Werbung. Open Source unter MIT-Lizenz.
+  downloadForMacos: Download für macOS
+  downloadVersion: Version <span data-release-version="">1.2.1</span> · Apple Silicon
+  releasedUnder: Veröffentlicht unter der
+  mitLicense: MIT-Lizenz
+  allRightsReserved: Alle Rechte vorbehalten.
+  opensInNewTab: (öffnet in neuem Tab)
+  legalAria: Rechtliches
+  legalNotice: Impressum
+  privacyPolicy: Datenschutz
+demo:
+  queued: wartet
+  rows:
+    - filename: screenshot-2026.png
+      result: 80% gespart · 4,2 MB → 820 KB
+      output: screenshot-2026.min.png
+    - filename: urlaub-032.jpg
+      result: 83% gespart · 8,1 MB → 1,4 MB
+      output: urlaub-032.min.jpg
+    - filename: animation.gif
+      result: 84% gespart · 6,7 MB → 1,1 MB
+      output: animation.min.gif
+    - filename: cover.avif
+      result: 84% gespart · 2,5 MB → 400 KB
+      output: cover.min.avif
+  compressing: Komprimiere %s…
+  summary: 4 Bilder · 17,8 MB gespart (83%)

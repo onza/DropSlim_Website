@@ -1,32 +1,6 @@
-//
-// @Author: Martin Farkas
-// @Email:  info@websites-graphix.com
-//
-
 const COMPRESS_MS = 650
 const START_DELAY = 150
 const INTRO_MS = 1400
-
-function isDe() {
-  return document.documentElement.lang === 'de'
-}
-
-function compressingText(filename) {
-  return isDe() ? `Komprimiere ${filename}…` : `Compressing ${filename}…`
-}
-
-function batchStatusText(done, total, filename) {
-  if (total <= 1) {
-    return filename ? compressingText(filename) : ''
-  }
-
-  const progress = `${done} / ${total}`
-  return filename ? `${progress} — ${filename}` : progress
-}
-
-function batchSummaryText() {
-  return isDe() ? '4 Bilder · 17,8 MB gespart (83%)' : '4 images · saved 17.8 MB (83%)'
-}
 
 function sleep(ms) {
   return new Promise((resolve) => {
@@ -42,6 +16,13 @@ export function initDemo() {
   const cancelBtn = heroDemo?.querySelector('.demo-cancel')
   const demoRows = [...document.querySelectorAll('[data-demo-row]')]
   if (!demoRows.length || !heroDemo) return
+
+  const compressingTemplate = heroDemo.dataset.demoCompressing ?? 'Compressing %s…'
+  const batchSummaryText = heroDemo.dataset.demoSummary ?? ''
+
+  function compressingText(filename) {
+    return compressingTemplate.replace('%s', filename)
+  }
 
   function setDragzoneStatus(message) {
     if (!dragzoneStatus) return
@@ -74,7 +55,7 @@ export function initDemo() {
 
   if (prefersReducedMotion) {
     endProcessing()
-    setBatchSummary(batchSummaryText())
+    setBatchSummary(batchSummaryText)
     demoRows.forEach((row) => {
       row.classList.remove('queued', 'active')
       row.classList.add('done')
@@ -100,6 +81,15 @@ export function initDemo() {
       to.textContent = queuedLabel
       to.style.animation = ''
     })
+  }
+
+  function batchStatusText(done, total, filename) {
+    if (total <= 1) {
+      return filename ? compressingText(filename) : ''
+    }
+
+    const progress = `${done} / ${total}`
+    return filename ? `${progress} — ${filename}` : progress
   }
 
   async function runIntroPhase(runId) {
@@ -160,7 +150,7 @@ export function initDemo() {
     }
 
     endProcessing()
-    setBatchSummary(batchSummaryText())
+    setBatchSummary(batchSummaryText)
     demoNeedsRun = false
   }
 

@@ -1,0 +1,53 @@
+seo:
+  home:
+    title: DropSlim — Mac で画像を小さく
+    description: DropSlim は Mac 上で画像を圧縮 — ローカル、高速、ドラッグ＆ドロップ。アカウント不要、サーバー不要、無料でオープンソース。
+    keywords: DropSlim, 画像圧縮, macOS, JPEG, PNG, WebP, HEIC, AVIF, ドラッグアンドドロップ, 画像を縮小, オープンソース
+  legalNotice:
+    title: 法的告知 · DropSlim
+    description: DropSlim ウェブサイトの法的告知および提供者情報。
+    keywords: DropSlim, 法的告知
+  privacy:
+    title: プライバシーポリシー · DropSlim
+    description: DropSlim ウェブサイトのプライバシーポリシー。
+    keywords: DropSlim, プライバシーポリシー, GDPR
+strings:
+  skipToContent: コンテンツへスキップ
+  mainNavigation: メインナビゲーション
+  language: 言語
+  githubAria: GitHub 上の DropSlim（新しいタブで開く）
+  download: ダウンロード
+  appleSilicon: Apple Silicon
+  demoDropzone: 画像またはフォルダをここにドロップ
+  demoFormats: PNG、JPG、GIF、SVG、WebP、HEIC、AVIF
+  waiting: 待機中
+  cancel: キャンセル
+  settingsHeading: 設定
+  getIt: 入手する。
+  downloadIntro: 無料。サブスクリプションなし。広告なし。MIT ライセンスのオープンソース。
+  downloadForMacos: macOS 版をダウンロード
+  downloadVersion: Version <span data-release-version="">1.2.1</span> · Apple Silicon
+  releasedUnder: ライセンス：
+  mitLicense: MIT ライセンス
+  allRightsReserved: 無断転載を禁じます。
+  opensInNewTab: （新しいタブで開く）
+  legalAria: 法的情報
+  legalNotice: 法的告知
+  privacyPolicy: プライバシーポリシー
+demo:
+  queued: 待機中
+  rows:
+    - filename: screenshot-2026.png
+      result: 80% 節約 · 4.2 MB → 820 KB
+      output: screenshot-2026.min.png
+    - filename: vacation-032.jpg
+      result: 83% 節約 · 8.1 MB → 1.4 MB
+      output: vacation-032.min.jpg
+    - filename: animation.gif
+      result: 84% 節約 · 6.7 MB → 1.1 MB
+      output: animation.min.gif
+    - filename: cover.avif
+      result: 84% 節約 · 2.5 MB → 400 KB
+      output: cover.min.avif
+  compressing: '%s を圧縮中…'
+  summary: 4 枚 · 17.8 MB 節約 (83%)

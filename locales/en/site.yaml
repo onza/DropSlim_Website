@@ -1,0 +1,53 @@
+seo:
+  home:
+    title: DropSlim — Shrink Images on Your Mac
+    description: DropSlim compresses images on your Mac — local, fast, drag & drop. No account, no server, free and open source.
+    keywords: DropSlim, image compression, macOS, JPEG, PNG, WebP, HEIC, AVIF, drag and drop, shrink images, open source
+  legalNotice:
+    title: Legal Notice · DropSlim
+    description: Legal notice and provider information for the DropSlim website.
+    keywords: DropSlim, legal notice
+  privacy:
+    title: Privacy Policy · DropSlim
+    description: Privacy policy for the DropSlim website.
+    keywords: DropSlim, privacy policy, GDPR
+strings:
+  skipToContent: Skip to content
+  mainNavigation: Main navigation
+  language: Language
+  githubAria: DropSlim on GitHub (opens in new tab)
+  download: Download
+  appleSilicon: Apple Silicon
+  demoDropzone: Drop images or folders here
+  demoFormats: PNG, JPG, GIF, SVG, WebP, HEIC and AVIF
+  waiting: waiting
+  cancel: Cancel
+  settingsHeading: Settings
+  getIt: Get it.
+  downloadIntro: Free. No subscription. No ads. Open source under the MIT license.
+  downloadForMacos: Download for macOS
+  downloadVersion: Version <span data-release-version="">1.2.1</span> · Apple Silicon
+  releasedUnder: Released under the
+  mitLicense: MIT License
+  allRightsReserved: All rights reserved.
+  opensInNewTab: (opens in new tab)
+  legalAria: Legal
+  legalNotice: Legal Notice
+  privacyPolicy: Privacy Policy
+demo:
+  queued: waiting
+  rows:
+    - filename: screenshot-2026.png
+      result: You saved 80% · 4.2 MB → 820 KB
+      output: screenshot-2026.min.png
+    - filename: vacation-032.jpg
+      result: You saved 83% · 8.1 MB → 1.4 MB
+      output: vacation-032.min.jpg
+    - filename: animation.gif
+      result: You saved 84% · 6.7 MB → 1.1 MB
+      output: animation.min.gif
+    - filename: cover.avif
+      result: You saved 84% · 2.5 MB → 400 KB
+      output: cover.min.avif
+  compressing: Compressing %s…
+  summary: 4 images · saved 17.8 MB (83%)
