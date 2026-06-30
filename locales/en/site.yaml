@@ -1,8 +1,8 @@
 seo:
   home:
-    title: DropSlim — Shrink Images on Your Mac
-    description: DropSlim compresses images on your Mac — local, fast, drag & drop. No account, no server, free and open source.
-    keywords: DropSlim, image compression, macOS, JPEG, PNG, WebP, HEIC, AVIF, drag and drop, shrink images, open source
+    title: DropSlim — Shrink Images on Mac and Windows
+    description: DropSlim compresses images locally on Mac and Windows — fast, drag & drop. No account, no server, free and open source.
+    keywords: DropSlim, image compression, macOS, Windows, JPEG, PNG, WebP, HEIC, AVIF, drag and drop, shrink images, open source
   legalNotice:
     title: Legal Notice · DropSlim
     description: Legal notice and provider information for the DropSlim website.
@@ -17,7 +17,6 @@ strings:
   language: Language
   githubAria: DropSlim on GitHub (opens in new tab)
   download: Download
-  appleSilicon: Apple Silicon
   demoDropzone: Drop images or folders here
   demoFormats: PNG, JPG, GIF, SVG, WebP, HEIC and AVIF
   waiting: waiting
@@ -26,7 +25,10 @@ strings:
   getIt: Get it.
   downloadIntro: Free. No subscription. No ads. Open source under the MIT license.
   downloadForMacos: Download for macOS
-  downloadVersion: Version <span data-release-version="">1.2.1</span> · Apple Silicon
+  downloadForWindows: Download for Windows
+  downloadMacArch: Apple Silicon
+  downloadWindowsArch: Windows 64-bit
+  downloadVersion: Version <span data-release-version="">1.3.1</span>
   releasedUnder: Released under the
   mitLicense: MIT License
   allRightsReserved: All rights reserved.

@@ -1,6 +1,39 @@
 import site from './site.js'
 
-const DMG_PATTERN = /_aarch64\.dmg$/
+const MAC_PATTERN = /_aarch64\.dmg$/
+const WIN_PATTERN = /_x64-setup\.exe$/i
+
+function findAsset(assets, pattern) {
+  return assets?.find((item) => pattern.test(item.name)) ?? null
+}
+
+function platformFromAsset(asset, tag, version, platform, fallback) {
+  if (asset) {
+    return { url: asset.browser_download_url, name: asset.name }
+  }
+
+  const fb = fallback[platform]
+  if (fb?.url) {
+    return { url: fb.url, name: fb.url.split('/').pop() ?? '' }
+  }
+
+  const file =
+    platform === 'macos' ? `DropSlim_${version}_aarch64.dmg` : `DropSlim_${version}_x64-setup.exe`
+
+  return {
+    url: `https://github.com/onza/DropSlim/releases/download/${tag}/${file}`,
+    name: file,
+  }
+}
+
+function fromFallback(fallback) {
+  return {
+    tag: fallback.tag,
+    version: fallback.version,
+    macos: platformFromAsset(null, fallback.tag, fallback.version, 'macos', fallback),
+    windows: platformFromAsset(null, fallback.tag, fallback.version, 'windows', fallback),
+  }
+}
 
 export default async function () {
   const tagOverride = process.env.APP_RELEASE_TAG?.trim()
@@ -23,24 +56,32 @@ export default async function () {
     }
 
     const data = await res.json()
-    const asset = data.assets?.find((item) => DMG_PATTERN.test(item.name))
-
-    if (!asset) {
-      throw new Error(`No Apple Silicon DMG in release ${data.tag_name}`)
-    }
-
     const tag = data.tag_name
+    const version = tag.replace(/^v/, '')
     const release = {
       tag,
-      version: tag.replace(/^v/, ''),
-      url: asset.browser_download_url,
-      name: asset.name,
+      version,
+      macos: platformFromAsset(
+        findAsset(data.assets, MAC_PATTERN),
+        tag,
+        version,
+        'macos',
+        fallback,
+      ),
+      windows: platformFromAsset(
+        findAsset(data.assets, WIN_PATTERN),
+        tag,
+        version,
+        'windows',
+        fallback,
+      ),
     }
-    console.info(`[release] ${release.tag} → ${release.name}`)
+
+    console.info(`[release] ${release.tag} → ${release.macos.name}, ${release.windows.name}`)
     return release
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error)
     console.warn(`[release] ${message} — using fallback (${fallback.tag})`)
-    return { ...fallback, name: fallback.url.split('/').pop() ?? '' }
+    return fromFallback(fallback)
   }
 }

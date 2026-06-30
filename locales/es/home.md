@@ -1,11 +1,11 @@
 ---
-heroTag: macOS · local · privado · gratuito · open source
+heroTag: macOS y Windows · local · privado · gratuito · open source
 heroTitle: |-
   Haz que los archivos
   grandes sean *pequeños*.
 heroSub: |-
   Suelta tus imágenes. DropSlim hace los cálculos. Listo.
-  Todo permanece en tu Mac — sin cuenta, sin servidor.
+  Todo permanece en tu ordenador — sin cuenta, sin servidor.
 lessVolume: menos volumen (+/-)
 whyHeading: Por qué DropSlim.
 compareBeforeAria: 'Antes: 12,4 MB — 4 capturas, un correo, límite alcanzado'
@@ -23,7 +23,7 @@ features:
     body: Aplicación ligera, compresión rápida. Poco espacio, sin sobrecarga.
   - num: '03'
     title: Funciona sin conexión
-    body: No se requiere Internet. La compresión se ejecuta íntegramente en tu Mac.
+    body: No se requiere Internet. La compresión se ejecuta íntegramente en tu ordenador.
   - num: '04'
     title: Privacidad
     body: Sin subidas. Sin seguimiento. Tus fotos nunca salen de tu equipo.
@@ -32,7 +32,7 @@ features:
     body: ¿200 capturas? De una vez. Suelta una carpeta, todo en una pasada.
   - num: '06'
     title: PNG · JPEG · GIF · SVG · WebP · HEIC · AVIF
-    body: Todos los formatos habituales — preajustes para web, correo, archivo. O tu propia calidad.
+    body: Todos los formatos habituales — preajustes para web, correo, archivo. HEIC solo en macOS.
   - num: '07'
     title: Ajustes
     body: Sobrescribir, guardar junto al original con sufijo `.min`, o en tu propia carpeta — tú decides qué ocurre.
@@ -44,4 +44,4 @@ features:
 
 ## Para todos los que envían y suben imágenes.
 
-¿Adjunto de correo lleno? ¿Notion lento? ¿Slack se queja? ¿Mantenimiento web? Los archivos gráficos sin comprimir no son sostenibles ni eficientes. DropSlim convierte PNG, JPEG, GIF, SVG, WebP, HEIC y AVIF en archivos listos para enviar y para la web — sin exportar nada en Photoshop.
+¿Adjunto de correo lleno? ¿Notion lento? ¿Slack se queja? ¿Mantenimiento web? Los archivos gráficos sin comprimir no son sostenibles ni eficientes. DropSlim convierte PNG, JPEG, GIF, SVG, WebP, HEIC y AVIF en archivos listos para enviar y para la web — en Mac y Windows, sin exportar nada en Photoshop.

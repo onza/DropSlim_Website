@@ -7,13 +7,18 @@ export default {
   author: 'Martin Farkas',
   ogImage: '/og-image.jpg',
   twitterCard: 'summary_large_image',
-  ogImageAlt: 'DropSlim — image compression app for macOS',
+  ogImageAlt: 'DropSlim — image compression app for macOS and Windows',
   app: {
     repo: 'onza/DropSlim',
     fallback: {
-      tag: 'v1.2.1',
-      version: '1.2.1',
-      url: 'https://github.com/onza/DropSlim/releases/download/v1.2.1/DropSlim_1.2.1_aarch64.dmg',
+      tag: 'v1.3.1',
+      version: '1.3.1',
+      macos: {
+        url: 'https://github.com/onza/DropSlim/releases/download/v1.3.1/DropSlim_1.3.1_aarch64.dmg',
+      },
+      windows: {
+        url: 'https://github.com/onza/DropSlim/releases/download/v1.3.1/DropSlim_1.3.1_x64-setup.exe',
+      },
     },
   },
 }

@@ -12,7 +12,14 @@ import { renderPage } from '../src/lib/handlebars.js'
 const rootDir = join(dirname(fileURLToPath(import.meta.url)), '..')
 const localesDir = join(rootDir, 'locales')
 
-const REQUIRED_STRING_KEYS = ['skipToContent', 'download', 'legalNotice', 'privacyPolicy']
+const REQUIRED_STRING_KEYS = [
+  'skipToContent',
+  'download',
+  'downloadForMacos',
+  'downloadForWindows',
+  'legalNotice',
+  'privacyPolicy',
+]
 
 const ajv = new Ajv({ allErrors: true })
 const validateSiteYaml = ajv.compile(siteSchema)
@@ -91,6 +98,15 @@ for (const meta of LOCALES) {
       site,
       release: label === 'home' ? release : undefined,
     })
+
+    if (label === 'home') {
+      if (!html.includes("data-release-download='macos'")) {
+        fail(`[verify] ${meta.id}/${label}: macOS download missing`)
+      }
+      if (!html.includes("data-release-download='windows'")) {
+        fail(`[verify] ${meta.id}/${label}: Windows download missing`)
+      }
+    }
 
     if (!html.includes('lang-dropdown')) {
       fail(`[verify] ${meta.id}/${label}: lang switch missing`)

@@ -1,8 +1,8 @@
 seo:
   home:
-    title: DropSlim — Réduire les images sur votre Mac
-    description: DropSlim compresse les images sur votre Mac — en local, rapidement, par glisser-déposer. Pas de compte, pas de serveur, gratuit et open source.
-    keywords: DropSlim, compression d'images, macOS, JPEG, PNG, WebP, HEIC, AVIF, glisser-déposer, réduire images, open source
+    title: DropSlim — Réduire les images sur Mac et Windows
+    description: DropSlim compresse les images localement sur Mac et Windows — rapide, par glisser-déposer. Pas de compte, pas de serveur, gratuit et open source.
+    keywords: DropSlim, compression d'images, macOS, Windows, JPEG, PNG, WebP, HEIC, AVIF, glisser-déposer, réduire images, open source
   legalNotice:
     title: Mentions légales · DropSlim
     description: Mentions légales et informations sur l'éditeur du site DropSlim.
@@ -10,14 +10,13 @@ seo:
   privacy:
     title: Politique de confidentialité · DropSlim
     description: Politique de confidentialité du site DropSlim.
-    keywords: DropSlim, politique de confidentialité, RGPD
+    keywords: DropSlim, confidentialité, RGPD
 strings:
   skipToContent: Aller au contenu
   mainNavigation: Navigation principale
   language: Langue
-  githubAria: DropSlim sur GitHub (s'ouvre dans un nouvel onglet)
+  githubAria: DropSlim sur GitHub (ouvre dans un nouvel onglet)
   download: Télécharger
-  appleSilicon: Apple Silicon
   demoDropzone: Déposez des images ou des dossiers ici
   demoFormats: PNG, JPG, GIF, SVG, WebP, HEIC et AVIF
   waiting: en attente
@@ -26,28 +25,31 @@ strings:
   getIt: Téléchargez-le.
   downloadIntro: Gratuit. Pas d'abonnement. Pas de publicité. Open source sous licence MIT.
   downloadForMacos: Télécharger pour macOS
-  downloadVersion: Version <span data-release-version="">1.2.1</span> · Apple Silicon
+  downloadForWindows: Télécharger pour Windows
+  downloadMacArch: Apple Silicon
+  downloadWindowsArch: Windows 64 bits
+  downloadVersion: Version <span data-release-version="">1.3.1</span>
   releasedUnder: Publié sous la
-  mitLicense: Licence MIT
+  mitLicense: licence MIT
   allRightsReserved: Tous droits réservés.
-  opensInNewTab: (s'ouvre dans un nouvel onglet)
+  opensInNewTab: (ouvre dans un nouvel onglet)
   legalAria: Mentions légales
   legalNotice: Mentions légales
-  privacyPolicy: Politique de confidentialité
+  privacyPolicy: Confidentialité
 demo:
   queued: en attente
   rows:
-    - filename: screenshot-2026.png
-      result: Vous avez économisé 80 % · 4,2 Mo → 820 Ko
-      output: screenshot-2026.min.png
-    - filename: vacation-032.jpg
-      result: Vous avez économisé 83 % · 8,1 Mo → 1,4 Mo
-      output: vacation-032.min.jpg
+    - filename: capture-2026.png
+      result: 80 % économisés · 4,2 Mo → 820 Ko
+      output: capture-2026.min.png
+    - filename: vacances-032.jpg
+      result: 83 % économisés · 8,1 Mo → 1,4 Mo
+      output: vacances-032.min.jpg
     - filename: animation.gif
-      result: Vous avez économisé 84 % · 6,7 Mo → 1,1 Mo
+      result: 84 % économisés · 6,7 Mo → 1,1 Mo
       output: animation.min.gif
-    - filename: cover.avif
-      result: Vous avez économisé 84 % · 2,5 Mo → 400 Ko
-      output: cover.min.avif
+    - filename: couverture.avif
+      result: 84 % économisés · 2,5 Mo → 400 Ko
+      output: couverture.min.avif
   compressing: Compression de %s…
   summary: 4 images · 17,8 Mo économisés (83 %)
