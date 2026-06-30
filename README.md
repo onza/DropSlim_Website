@@ -22,6 +22,6 @@ locales/de/
 
 ## License
 
-Copyright (C) 2023 - present by Martin Farkas.
+Copyright (C) 2026 - present by Martin Farkas.
 
 Further information can be found in the [LICENSE](LICENSE).
