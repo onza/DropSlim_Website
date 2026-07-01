@@ -11,13 +11,13 @@ export default {
   app: {
     repo: 'onza/DropSlim',
     fallback: {
-      tag: 'v1.3.1',
-      version: '1.3.1',
+      tag: 'v1.4.0',
+      version: '1.4.0',
       macos: {
-        url: 'https://github.com/onza/DropSlim/releases/download/v1.3.1/DropSlim_1.3.1_aarch64.dmg',
+        url: 'https://github.com/onza/DropSlim/releases/download/v1.4.0/DropSlim_1.4.0_aarch64.dmg',
       },
       windows: {
-        url: 'https://github.com/onza/DropSlim/releases/download/v1.3.1/DropSlim_1.3.1_x64-setup.exe',
+        url: 'https://github.com/onza/DropSlim/releases/download/v1.4.0/DropSlim_1.4.0_x64-setup.exe',
       },
     },
   },
