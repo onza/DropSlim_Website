@@ -54,3 +54,62 @@
     margin-bottom: 0;
   }
 }
+
+.download-install {
+  display: grid;
+  gap: 1rem;
+  margin-top: 3rem;
+  text-align: left;
+  max-width: 52rem;
+  margin-inline: auto;
+
+  @media (min-width: 840px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.install-panel {
+  padding: 1.5rem;
+  border-radius: 12px;
+
+  h3 {
+    font-size: var(--size-h4);
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+  }
+  .install-req {
+    font-size: var(--size-label);
+    color: var(--muted);
+    margin: 0 0 1rem;
+    line-height: 1.5;
+  }
+  ol {
+    margin: 0 0 1rem 1.25rem;
+    padding: 0;
+
+    li {
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+      font-size: var(--size-body);
+    }
+  }
+  .install-note {
+    font-size: var(--size-label);
+    color: var(--muted);
+    line-height: 1.6;
+
+    p {
+      margin: 0;
+      font-size: inherit;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+
+      &:hover {
+        color: var(--text);
+      }
+    }
+  }
+}

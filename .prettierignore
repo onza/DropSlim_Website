@@ -5,3 +5,4 @@ src/scss
 .11ty-vite
 src/_includes/pages
 src/_includes/download-buttons.hbs
+src/_includes/download-install.hbs

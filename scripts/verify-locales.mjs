@@ -87,6 +87,10 @@ for (const meta of LOCALES) {
     fail(`[verify] ${meta.id}: missing demo rows`)
   }
 
+  if (!locale.install?.macos?.steps?.length || !locale.install?.windows?.steps?.length) {
+    fail(`[verify] ${meta.id}: incomplete install instructions`)
+  }
+
   for (const [label, template, list] of [
     ['home', 'home', pages.home],
     ['legal', 'article', pages.legal],
@@ -105,6 +109,9 @@ for (const meta of LOCALES) {
       }
       if (!html.includes("data-release-download='windows'")) {
         fail(`[verify] ${meta.id}/${label}: Windows download missing`)
+      }
+      if (!html.includes('install-panel')) {
+        fail(`[verify] ${meta.id}/${label}: install instructions missing`)
       }
     }
 

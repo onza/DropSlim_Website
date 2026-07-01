@@ -65,6 +65,7 @@ function buildEntry(meta, locale, kind) {
   if (kind === 'home') {
     entry.home = locale.home
     entry.demo = locale.demo
+    entry.install = locale.install
   } else {
     entry.articleHtml = kind === 'legal' ? locale.legalArticle : locale.privacyArticle
   }

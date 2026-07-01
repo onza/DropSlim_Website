@@ -1,4 +1,4 @@
-import { loadArticle, loadHome, loadSite } from '../lib/locale-content.js'
+import { enrichInstall, loadArticle, loadHome, loadSite } from '../lib/locale-content.js'
 
 export const LOCALES = [
   {
@@ -75,6 +75,7 @@ export const LOCALES = [
 
 export function loadLocale(id) {
   const locale = loadSite(id)
+  locale.install = enrichInstall(locale.install)
   locale.home = loadHome(id)
   locale.legalArticle = loadArticle(id, 'legal')
   locale.privacyArticle = loadArticle(id, 'privacy')

@@ -36,6 +36,23 @@ strings:
   legalAria: Jurídico
   legalNotice: Aviso legal
   privacyPolicy: Privacidade
+install:
+  macos:
+    heading: macOS
+    requirements: macOS 11 (Big Sur) ou posterior, Apple Silicon (M1 ou mais recente)
+    steps:
+      - Baixe o arquivo DMG.
+      - Abra o DMG e arraste o DropSlim para Aplicativos.
+      - Abra o DropSlim em Aplicativos.
+  windows:
+    heading: Windows
+    requirements: Windows 10 ou posterior (64 bits)
+    steps:
+      - Baixe o instalador EXE.
+      - Se o navegador bloquear o download, escolha Manter ou Manter mesmo assim.
+      - Execute o instalador.
+      - Se o SmartScreen mostrar "O Windows protegeu seu PC", clique em Mais informações e depois em Executar mesmo assim.
+      - Siga o assistente de instalação e inicie o DropSlim pelo menu Iniciar ou atalho na área de trabalho.
 demo:
   queued: aguardando
   rows:

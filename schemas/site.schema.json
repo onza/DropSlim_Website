@@ -4,7 +4,7 @@
   "title": "DropSlim locale site config",
   "type": "object",
   "additionalProperties": false,
-  "required": ["seo", "strings", "demo"],
+  "required": ["seo", "strings", "install", "demo"],
   "properties": {
     "seo": {
       "type": "object",
@@ -19,6 +19,15 @@
     "strings": {
       "type": "object",
       "additionalProperties": { "type": "string" }
+    },
+    "install": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["macos", "windows"],
+      "properties": {
+        "macos": { "$ref": "#/$defs/installPanel" },
+        "windows": { "$ref": "#/$defs/installPanel" }
+      }
     },
     "demo": {
       "type": "object",
@@ -45,6 +54,21 @@
     }
   },
   "$defs": {
+    "installPanel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["heading", "requirements", "steps"],
+      "properties": {
+        "heading": { "type": "string" },
+        "requirements": { "type": "string" },
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "note": { "type": "string" }
+      }
+    },
     "seoPage": {
       "type": "object",
       "additionalProperties": false,

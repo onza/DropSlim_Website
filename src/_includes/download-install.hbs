@@ -1,0 +1,26 @@
+<div class='download-install'>
+  <article class='install-panel glass-panel'>
+    <h3>{{install.macos.heading}}</h3>
+    <p class='install-req'>{{install.macos.requirements}}</p>
+    <ol>
+      {{#each install.macos.steps}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ol>
+    {{#if install.macos.noteHtml}}
+      <div class='install-note'>{{{install.macos.noteHtml}}}</div>
+    {{/if}}
+  </article>
+  <article class='install-panel glass-panel'>
+    <h3>{{install.windows.heading}}</h3>
+    <p class='install-req'>{{install.windows.requirements}}</p>
+    <ol>
+      {{#each install.windows.steps}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ol>
+    {{#if install.windows.noteHtml}}
+      <div class='install-note'>{{{install.windows.noteHtml}}}</div>
+    {{/if}}
+  </article>
+</div>

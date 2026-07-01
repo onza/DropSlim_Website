@@ -36,6 +36,23 @@ strings:
   legalAria: 法的情報
   legalNotice: 法的通知
   privacyPolicy: プライバシー
+install:
+  macos:
+    heading: macOS
+    requirements: macOS 11 (Big Sur) 以降、Apple Silicon（M1 以降）
+    steps:
+      - DMG ファイルをダウンロードする。
+      - DMG を開き、DropSlim をアプリケーションにドラッグする。
+      - アプリケーションから DropSlim を起動する。
+  windows:
+    heading: Windows
+    requirements: Windows 10 以降（64 ビット）
+    steps:
+      - セットアップ EXE をダウンロードする。
+      - ブラウザがブロックした場合は「保持」または「とにかく保持」を選ぶ。
+      - インストーラーを実行する。
+      - SmartScreen で「Windows によって PC が保護されました」と表示されたら「詳細情報」→「実行」を選ぶ。
+      - セットアップ ウィザードに従い、スタートメニューまたはデスクトップのショートカットから DropSlim を起動する。
 demo:
   queued: 待機中
   rows:
