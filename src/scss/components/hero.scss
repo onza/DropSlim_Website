@@ -29,7 +29,7 @@
   }
   h1 {
     width: 100%;
-    font-size: clamp(2.5rem, 2.5rem + 2.5vw, 6.5rem);
+    font-size: var(--size-hero);
     line-height: 0.95;
     margin: 0;
     em {
@@ -46,7 +46,7 @@
     margin-top: clamp(1.5rem, 3vw, 2.5rem);
   }
   .hero-sub {
-    font-size: clamp(1.125rem, 2.8vw, 1.375rem);
+    font-size: var(--size-body-lg);
     line-height: 1.6;
     max-width: 40rem;
     margin-bottom: 0;

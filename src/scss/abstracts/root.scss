@@ -21,17 +21,41 @@
   --tracking: 0.025em;
   --tracking-wide: 0.05em;
 
-  --size-h3: clamp(1.375rem, 2.5vw, 1.75rem);
-  --size-h4: clamp(1rem, 1.5vw, 1.125rem);
-  --size-body-lg: clamp(1.125rem, 1.5vw, 1.375rem);
-  --size-label: clamp(0.938rem, 1.2vw, 1.125rem);
-  --size-li-num: clamp(1.5rem, 4vw, 1.875rem);
-  --size-caption: clamp(0.875rem, 1vw, 1rem);
-  --size-ui: clamp(0.938rem, 1vw, 1rem);
+  /* Fixed minimums below 480px — no fluid shrink */
+  --size-body: 1rem;
+  --size-body-lg: 1rem;
+  --size-h1: 1.5rem;
+  --size-h2: 1.5rem;
+  --size-h3: 1.25rem;
+  --size-h4: 1rem;
+  --size-hero: 2.5rem;
+  --size-label: 0.9375rem;
+  --size-caption: 0.875rem;
+  --size-ui: 0.9375rem;
+  --size-li-num: 1.125rem;
+  --size-stat-unit: 1.75rem;
+  --size-wordmark: 1.75rem;
+  --size-btn-lg: 1rem;
 
   --section-gap: clamp(4rem, 8vw, 10rem);
 
   --glass-bg: hsl(222 56% 7% / 0.42);
   --glass-border: hsl(0 0% 100% / 0.09);
   --glass-highlight: hsl(0 0% 100% / 0.06);
+
+  @media (min-width: 480px) {
+    --size-body-lg: clamp(1.125rem, 1rem + 0.4vw, 1.375rem);
+    --size-h1: clamp(1.5rem, 1.25rem + 0.8vw, 2.75rem);
+    --size-h2: clamp(1.5rem, 1.15rem + 1vw, 3.5rem);
+    --size-h3: clamp(1.375rem, 1.2rem + 0.5vw, 1.75rem);
+    --size-h4: clamp(1rem, 0.925rem + 0.2vw, 1.125rem);
+    --size-hero: clamp(2.5rem, 1.75rem + 2.5vw, 6.5rem);
+    --size-label: clamp(0.9375rem, 0.85rem + 0.25vw, 1.125rem);
+    --size-caption: clamp(0.875rem, 0.8rem + 0.15vw, 1rem);
+    --size-ui: clamp(0.9375rem, 0.875rem + 0.15vw, 1rem);
+    --size-li-num: clamp(1.25rem, 0.9rem + 0.8vw, 1.875rem);
+    --size-stat-unit: clamp(1.75rem, 1.25rem + 1.2vw, 2.5rem);
+    --size-wordmark: clamp(1.75rem, 1.4rem + 1vw, 2.25rem);
+    --size-btn-lg: clamp(1rem, 0.925rem + 0.2vw, 1.125rem);
+  }
 }

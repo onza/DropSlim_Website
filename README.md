@@ -2,9 +2,9 @@
 
 [![Build](https://github.com/onza/DropSlim_Website/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/onza/DropSlim_Website/actions/workflows/deploy-pages.yml)
 
-Static marketing website for [DropSlim](https://dropslim.app).
+Static marketing website for the [DropSlim App](https://github.com/onza/DropSlim_Website).
 
-Built with [Eleventy](https://www.11ty.dev/) and [Vite](https://vitejs.dev/) (`@11ty/eleventy-plugin-vite`).
+Built with Eleventy and Vite.
 
 ## Translations
 
@@ -14,10 +14,10 @@ Translations were **generated with AI** and may contain errors or awkward wordin
 
 ```text
 locales/de/
-  site.yaml    UI, SEO, demo
   home.md
   legal.md
   privacy.md
+  site.yaml    UI, SEO, demo
 ```
 
 ## License

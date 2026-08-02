@@ -28,7 +28,7 @@ features:
     title: Datenschutz
     body: Kein Upload. Kein Tracking. Deine Fotos verlassen den Rechner nicht.
   - num: '05'
-    title: Stapelverarbeitung
+    title: "Stapel\u00ADverarbeitung"
     body: 200 Screenshots? Ein Zug. Ordner rüberziehen, alles in einem Durchlauf.
   - num: '06'
     title: PNG · JPEG · GIF · SVG · WebP · HEIC · AVIF
