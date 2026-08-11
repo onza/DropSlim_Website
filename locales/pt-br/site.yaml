@@ -1,8 +1,8 @@
 seo:
   home:
     title: DropSlim — Reduza imagens no Mac e Windows
-    description: DropSlim comprime imagens localmente no Mac e Windows — rápido, arrastar e soltar. Sem conta, sem servidor, gratuito e open source.
-    keywords: DropSlim, compressão de imagens, macOS, Windows, JPEG, PNG, WebP, HEIC, AVIF, arrastar e soltar, reduzir imagens, open source
+    description: DropSlim comprime e converte imagens localmente no Mac e Windows — rápido, arrastar e soltar. Sem conta, sem servidor, gratuito e open source.
+    keywords: DropSlim, compressão de imagens, converter imagens, macOS, Windows, JPEG, PNG, WebP, HEIC, AVIF, arrastar e soltar, reduzir imagens, open source
   legalNotice:
     title: Aviso legal · DropSlim
     description: Aviso legal e informações do fornecedor do site DropSlim.

@@ -1,8 +1,8 @@
 seo:
   home:
     title: DropSlim — Mac と Windows で画像を小さく
-    description: DropSlim は Mac と Windows で画像をローカルに圧縮 — 高速、ドラッグ＆ドロップ。アカウント不要、サーバー不要、無料でオープンソース。
-    keywords: DropSlim, 画像圧縮, macOS, Windows, JPEG, PNG, WebP, HEIC, AVIF, ドラッグアンドドロップ, 画像を縮小, オープンソース
+    description: DropSlim は Mac と Windows で画像をローカルに圧縮・変換 — 高速、ドラッグ＆ドロップ。アカウント不要、サーバー不要、無料でオープンソース。
+    keywords: DropSlim, 画像圧縮, 画像変換, macOS, Windows, JPEG, PNG, WebP, HEIC, AVIF, ドラッグアンドドロップ, 画像を縮小, オープンソース
   legalNotice:
     title: 法的通知 · DropSlim
     description: DropSlim ウェブサイトの法的通知と提供者情報。
