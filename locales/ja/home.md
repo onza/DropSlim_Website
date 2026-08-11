@@ -46,6 +46,9 @@ features:
     title: 設定
     body: 上書き、`.min` サフィックスで隣に保存、または専用フォルダへ — あなたが決めます。
   - num: '11'
+    title: 多言語対応
+    body: 日本語、English、Deutsch、Français、Español、Italiano、Português — またはシステム言語に合わせます。
+  - num: '12'
     title: オープンソース
     body: MIT ライセンス。ソースコードは <a href="https://github.com/onza/DropSlim" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden">（新しいタブで開く）</span></a> — 確認・フォーク・貢献が可能。
     rich: true

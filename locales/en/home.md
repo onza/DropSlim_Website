@@ -46,6 +46,9 @@ features:
     title: Settings
     body: Overwrite, save alongside with a `.min` suffix, or to your own folder — you decide what happens.
   - num: '11'
+    title: Multilingual
+    body: English, Deutsch, Français, Español, Italiano, 日本語, and Português — or follow your system language.
+  - num: '12'
     title: Open Source
     body: MIT license. Source code on <a href="https://github.com/onza/DropSlim" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in new tab)</span></a> — inspectable, forkable, open to contributions.
     rich: true

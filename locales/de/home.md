@@ -46,6 +46,9 @@ features:
     title: Einstellungen
     body: Überschreiben, daneben mit `.min`-Suffix oder in eigenem Ordner — du legst fest, was passiert.
   - num: '11'
+    title: Mehrsprachig
+    body: Deutsch, English, Français, Español, Italiano, 日本語 und Português — oder Systemsprache.
+  - num: '12'
     title: Open Source
     body: MIT-Lizenz. Quellcode auf <a href="https://github.com/onza/DropSlim" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (öffnet in neuem Tab)</span></a> — einsehbar, forkbar, mitmachbar.
     rich: true
