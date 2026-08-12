@@ -1,8 +1,8 @@
 # DropSlim Website
 
-[![Build](https://github.com/onza/DropSlim_Website/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/onza/DropSlim_Website/actions/workflows/deploy-pages.yml)
+[![Build](https://github.com/onza/DropSlim_Website/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/onza/DropSlim_Website/actions/workflows/deploy-pages.yml) [![Website](https://img.shields.io/badge/website-dropslim.app-0A7CFF)](https://dropslim.app/) [![Repository](https://img.shields.io/badge/repository-DropSlim-0A7CFF)](https://github.com/onza/DropSlim)
 
-Static marketing website for the [DropSlim App](https://github.com/onza/DropSlim_Website).
+Static marketing website for the [DropSlim App](https://github.com/onza/DropSlim).
 
 Built with Eleventy and Vite.
 
