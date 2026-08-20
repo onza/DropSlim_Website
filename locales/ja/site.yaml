@@ -58,15 +58,54 @@ demo:
   rows:
     - filename: screenshot-2026.png
       result: 80% 節約 · 4.2 MB → 820 KB
-      output: screenshot-2026.min.png
+      output: /Users/taro/Pictures/旅行/screenshot-2026.min.png
     - filename: vacation-032.jpg
       result: 83% 節約 · 8.1 MB → 1.4 MB
-      output: vacation-032.min.jpg
+      output: /Users/taro/Pictures/旅行/vacation-032.min.jpg
     - filename: animation.gif
       result: 84% 節約 · 6.7 MB → 1.1 MB
-      output: animation.min.gif
+      output: /Users/taro/Desktop/animation.min.gif
     - filename: cover.avif
       result: 84% 節約 · 2.5 MB → 400 KB
-      output: cover.min.avif
+      output: /Users/taro/Documents/Projects/cover.min.avif
   compressing: '%s を圧縮中…'
   summary: 4 枚 · 17.8 MB 節約 (83%)
+  settings:
+    title: 設定
+    back: 閉じる
+    versionPrefix: 'バージョン '
+    upToDate: DropSlim は最新です。
+    saveInSameFolder: 最適化したファイルを同じフォルダに保存
+    chooseFolder: フォルダを選択
+    chooseFolderOpen: 開く
+    minSuffix: 最適化ファイルに .min サフィックスを付ける
+    minifiedSubfolder: 「minified」サブフォルダを作成
+    limitDimensions: 最大幅 / 高さを制限
+    limitDimensionsHint: JPEG、PNG、WebP、AVIF
+    maxWidth: 最大幅 (px)
+    maxHeight: 最大高さ (px)
+    outputFormat: 出力形式
+    outputFormatHint: JPEG、PNG、WebP、AVIF、および HEIC（macOS）を変換します。GIF と SVG は形式を維持します。
+    formatOriginal: 元の形式を保持
+    formatJpeg: JPEG
+    formatPng: PNG
+    formatWebp: WebP
+    formatAvif: AVIF
+    clearOnNew: 新しい画像を最適化するときに結果リストをクリア
+    autoCheckUpdates: 自動的にアップデートを確認
+    autoInstallUpdates: 確認なしでアップデートをインストール
+    language: 言語
+    languageSystem: システムの設定
+    languageDe: Deutsch
+    languageEn: English
+    languageFr: Français
+    languageEs: Español
+    languageIt: Italiano
+    languageJa: 日本語
+    languagePtBr: 'Português (Brasil)'
+    updates: アップデート
+    checkNow: 今すぐ確認
+    confirmDisableMinSuffix:
+      title: オリジナルを上書きしますか？
+      body: .min サフィックスなしでは、最適化したファイルが同じ名前の既存ファイルを上書きすることがあります。
+      confirm: サフィックスをオフにする

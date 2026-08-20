@@ -58,15 +58,54 @@ demo:
   rows:
     - filename: screenshot-2026.png
       result: 80% gespart · 4,2 MB → 820 KB
-      output: screenshot-2026.min.png
+      output: /Users/max/Bilder/Urlaub/screenshot-2026.min.png
     - filename: urlaub-032.jpg
       result: 83% gespart · 8,1 MB → 1,4 MB
-      output: urlaub-032.min.jpg
+      output: /Users/max/Bilder/Urlaub/urlaub-032.min.jpg
     - filename: animation.gif
       result: 84% gespart · 6,7 MB → 1,1 MB
-      output: animation.min.gif
+      output: /Users/max/Desktop/animation.min.gif
     - filename: cover.avif
       result: 84% gespart · 2,5 MB → 400 KB
-      output: cover.min.avif
+      output: /Users/max/Dokumente/Projekte/cover.min.avif
   compressing: Komprimiere %s…
   summary: 4 Bilder · 17,8 MB gespart (83%)
+  settings:
+    title: Einstellungen
+    back: Schließen
+    versionPrefix: 'Version '
+    upToDate: DropSlim ist auf dem neuesten Stand.
+    saveInSameFolder: Optimierte Dateien im selben Ordner speichern
+    chooseFolder: Ordner wählen
+    chooseFolderOpen: Öffnen
+    minSuffix: .min-Suffix für optimierte Dateien
+    minifiedSubfolder: Unterordner „minified“ anlegen
+    limitDimensions: Max. Breite / Höhe begrenzen
+    limitDimensionsHint: JPEG, PNG, WebP und AVIF
+    maxWidth: Max. Breite (px)
+    maxHeight: Max. Höhe (px)
+    outputFormat: Ausgabeformat
+    outputFormatHint: Konvertiert JPEG, PNG, WebP, AVIF und HEIC (macOS). GIF und SVG behalten ihr Format.
+    formatOriginal: Originalformat behalten
+    formatJpeg: JPEG
+    formatPng: PNG
+    formatWebp: WebP
+    formatAvif: AVIF
+    clearOnNew: Ergebnisliste bei neuen Bildern leeren
+    autoCheckUpdates: Automatisch nach Updates suchen
+    autoInstallUpdates: Updates ohne Nachfrage installieren
+    language: Sprache
+    languageSystem: Systemstandard
+    languageDe: Deutsch
+    languageEn: English
+    languageFr: Français
+    languageEs: Español
+    languageIt: Italiano
+    languageJa: 日本語
+    languagePtBr: 'Português (Brasil)'
+    updates: Updates
+    checkNow: Jetzt prüfen
+    confirmDisableMinSuffix:
+      title: Originale überschreiben?
+      body: Ohne .min-Suffix können optimierte Dateien bestehende Dateien mit demselben Namen überschreiben.
+      confirm: Suffix ausschalten

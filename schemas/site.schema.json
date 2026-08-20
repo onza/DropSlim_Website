@@ -11,31 +11,49 @@
       "additionalProperties": false,
       "required": ["home", "legalNotice", "privacy"],
       "properties": {
-        "home": { "$ref": "#/$defs/seoPage" },
-        "legalNotice": { "$ref": "#/$defs/seoPage" },
-        "privacy": { "$ref": "#/$defs/seoPage" }
+        "home": {
+          "$ref": "#/$defs/seoPage"
+        },
+        "legalNotice": {
+          "$ref": "#/$defs/seoPage"
+        },
+        "privacy": {
+          "$ref": "#/$defs/seoPage"
+        }
       }
     },
     "strings": {
       "type": "object",
-      "additionalProperties": { "type": "string" }
+      "additionalProperties": {
+        "type": "string"
+      }
     },
     "install": {
       "type": "object",
       "additionalProperties": false,
       "required": ["macos", "windows"],
       "properties": {
-        "macos": { "$ref": "#/$defs/installPanel" },
-        "windows": { "$ref": "#/$defs/installPanel" }
+        "macos": {
+          "$ref": "#/$defs/installPanel"
+        },
+        "windows": {
+          "$ref": "#/$defs/installPanel"
+        }
       }
     },
     "demo": {
       "type": "object",
-      "required": ["rows"],
+      "required": ["rows", "settings"],
       "properties": {
-        "queued": { "type": "string" },
-        "compressing": { "type": "string" },
-        "summary": { "type": "string" },
+        "queued": {
+          "type": "string"
+        },
+        "compressing": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
         "rows": {
           "type": "array",
           "minItems": 1,
@@ -44,9 +62,176 @@
             "additionalProperties": false,
             "required": ["filename", "result", "output"],
             "properties": {
-              "filename": { "type": "string" },
-              "result": { "type": "string" },
-              "output": { "type": "string" }
+              "filename": {
+                "type": "string"
+              },
+              "result": {
+                "type": "string"
+              },
+              "output": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "settings": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "title",
+            "back",
+            "versionPrefix",
+            "upToDate",
+            "saveInSameFolder",
+            "chooseFolder",
+            "chooseFolderOpen",
+            "minSuffix",
+            "minifiedSubfolder",
+            "limitDimensions",
+            "limitDimensionsHint",
+            "maxWidth",
+            "maxHeight",
+            "outputFormat",
+            "outputFormatHint",
+            "formatOriginal",
+            "formatJpeg",
+            "formatPng",
+            "formatWebp",
+            "formatAvif",
+            "clearOnNew",
+            "autoCheckUpdates",
+            "autoInstallUpdates",
+            "language",
+            "languageSystem",
+            "languageDe",
+            "languageEn",
+            "updates",
+            "checkNow",
+            "confirmDisableMinSuffix",
+            "languageFr",
+            "languageEs",
+            "languageIt",
+            "languageJa",
+            "languagePtBr"
+          ],
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "back": {
+              "type": "string"
+            },
+            "versionPrefix": {
+              "type": "string"
+            },
+            "upToDate": {
+              "type": "string"
+            },
+            "saveInSameFolder": {
+              "type": "string"
+            },
+            "chooseFolder": {
+              "type": "string"
+            },
+            "chooseFolderOpen": {
+              "type": "string"
+            },
+            "minSuffix": {
+              "type": "string"
+            },
+            "minifiedSubfolder": {
+              "type": "string"
+            },
+            "limitDimensions": {
+              "type": "string"
+            },
+            "limitDimensionsHint": {
+              "type": "string"
+            },
+            "maxWidth": {
+              "type": "string"
+            },
+            "maxHeight": {
+              "type": "string"
+            },
+            "outputFormat": {
+              "type": "string"
+            },
+            "outputFormatHint": {
+              "type": "string"
+            },
+            "formatOriginal": {
+              "type": "string"
+            },
+            "formatJpeg": {
+              "type": "string"
+            },
+            "formatPng": {
+              "type": "string"
+            },
+            "formatWebp": {
+              "type": "string"
+            },
+            "formatAvif": {
+              "type": "string"
+            },
+            "clearOnNew": {
+              "type": "string"
+            },
+            "autoCheckUpdates": {
+              "type": "string"
+            },
+            "autoInstallUpdates": {
+              "type": "string"
+            },
+            "language": {
+              "type": "string"
+            },
+            "languageSystem": {
+              "type": "string"
+            },
+            "languageDe": {
+              "type": "string"
+            },
+            "languageEn": {
+              "type": "string"
+            },
+            "updates": {
+              "type": "string"
+            },
+            "checkNow": {
+              "type": "string"
+            },
+            "confirmDisableMinSuffix": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["title", "body", "confirm"],
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "body": {
+                  "type": "string"
+                },
+                "confirm": {
+                  "type": "string"
+                }
+              }
+            },
+            "languageFr": {
+              "type": "string"
+            },
+            "languageEs": {
+              "type": "string"
+            },
+            "languageIt": {
+              "type": "string"
+            },
+            "languageJa": {
+              "type": "string"
+            },
+            "languagePtBr": {
+              "type": "string"
             }
           }
         }
@@ -59,14 +244,22 @@
       "additionalProperties": false,
       "required": ["heading", "requirements", "steps"],
       "properties": {
-        "heading": { "type": "string" },
-        "requirements": { "type": "string" },
+        "heading": {
+          "type": "string"
+        },
+        "requirements": {
+          "type": "string"
+        },
         "steps": {
           "type": "array",
           "minItems": 1,
-          "items": { "type": "string" }
+          "items": {
+            "type": "string"
+          }
         },
-        "note": { "type": "string" }
+        "note": {
+          "type": "string"
+        }
       }
     },
     "seoPage": {
@@ -74,9 +267,15 @@
       "additionalProperties": false,
       "required": ["title", "description", "keywords"],
       "properties": {
-        "title": { "type": "string" },
-        "description": { "type": "string" },
-        "keywords": { "type": "string" }
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "string"
+        }
       }
     }
   }

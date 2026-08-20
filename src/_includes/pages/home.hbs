@@ -29,12 +29,15 @@
             data-demo-compressing="{{demo.compressing}}"
             data-demo-summary="{{demo.summary}}"
           >
+            <div class="demo-pointer" hidden></div>
+            <div class="demo-drag-files" hidden data-demo-drag-files></div>
             <div class="app-titlebar">
               <div class="app-traffic" aria-hidden="true">
                 <span class="app-traffic__btn app-traffic__btn--close"></span>
                 <span class="app-traffic__btn app-traffic__btn--minimize"></span>
                 <span class="app-traffic__btn app-traffic__btn--zoom"></span>
               </div>
+              <span class="app-titlebar__title">DropSlim</span>
               <div class="app-titlebar__drag" aria-hidden="true"></div>
             </div>
             <div class="app-window__body">
@@ -56,12 +59,160 @@
                   </section>
                 </div>
               </div>
+              <div class="app-settings">
+                <div class="settings-content">
+                  <h3>{{demo.settings.title}}</h3>
+                  <div class="setting-row">
+                    <span class="setting-label">{{demo.settings.saveInSameFolder}}</span>
+                    <span
+                      class="demo-toggle is-on"
+                      data-demo-control="toggle"
+                      data-demo-toggle="same-folder"
+                      data-demo-reveal-off="save-path"
+                    ><span class="demo-toggle__track"></span></span>
+                  </div>
+                  <div class="save-path is-hidden" data-demo-panel="save-path">
+                    <span class="save-path-label">{{demo.settings.chooseFolder}}</span>
+                    <span class="demo-btn">{{demo.settings.chooseFolderOpen}}</span>
+                  </div>
+                  <div class="setting-row">
+                    <span class="setting-label">{{demo.settings.minSuffix}}</span>
+                    <span
+                      class="demo-toggle is-on"
+                      data-demo-control="toggle"
+                      data-demo-toggle="min-suffix"
+                    ><span class="demo-toggle__track"></span></span>
+                  </div>
+                  <div class="setting-row">
+                    <span class="setting-label">{{demo.settings.minifiedSubfolder}}</span>
+                    <span class="demo-toggle" data-demo-toggle="subfolder"
+                      ><span class="demo-toggle__track"></span
+                    ></span>
+                  </div>
+                  <div class="setting-row">
+                    <span class="setting-label">{{demo.settings.limitDimensions}}</span>
+                    <span
+                      class="demo-toggle"
+                      data-demo-control="toggle"
+                      data-demo-toggle="limit-dimensions"
+                      data-demo-reveal="dimension-limits"
+                    ><span class="demo-toggle__track"></span></span>
+                  </div>
+                  <div class="dimension-limits is-hidden" data-demo-panel="dimension-limits">
+                    <p class="dimension-limits-hint">{{demo.settings.limitDimensionsHint}}</p>
+                    <label class="dimension-limits-field">
+                      <span class="dimension-limits-label">{{demo.settings.maxWidth}}</span>
+                      <span
+                        class="dimension-limits-value"
+                        data-demo-control="dimension-width"
+                        data-demo-value-next="1920"
+                      ></span>
+                    </label>
+                    <label class="dimension-limits-field">
+                      <span class="dimension-limits-label">{{demo.settings.maxHeight}}</span>
+                      <span
+                        class="dimension-limits-value"
+                        data-demo-control="dimension-height"
+                        data-demo-value-next="1080"
+                      ></span>
+                    </label>
+                  </div>
+                  <div class="setting-row setting-row--output-format">
+                    <span class="setting-label">{{demo.settings.outputFormat}}</span>
+                    <span class="demo-picker" data-demo-control="format-picker" data-demo-menu="format">
+                      <span class="demo-picker__value" data-demo-format-value>{{demo.settings.formatOriginal}}</span>
+                      <span class="demo-picker__chevron" aria-hidden="true">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      </span>
+                    </span>
+                    <ul class="demo-menu is-hidden" data-demo-menu-panel="format">
+                      <li class="demo-menu__item is-selected" data-demo-menu-option="format" data-demo-option-index="0">{{demo.settings.formatOriginal}}</li>
+                      <li class="demo-menu__item" data-demo-menu-option="format" data-demo-option-index="1">{{demo.settings.formatJpeg}}</li>
+                      <li class="demo-menu__item" data-demo-menu-option="format" data-demo-option-index="2">{{demo.settings.formatPng}}</li>
+                      <li class="demo-menu__item" data-demo-menu-option="format" data-demo-option-index="3">{{demo.settings.formatWebp}}</li>
+                      <li class="demo-menu__item" data-demo-menu-option="format" data-demo-option-index="4">{{demo.settings.formatAvif}}</li>
+                    </ul>
+                  </div>
+                  <p class="output-format-hint">{{demo.settings.outputFormatHint}}</p>
+                  <div class="setting-row">
+                    <span class="setting-label">{{demo.settings.clearOnNew}}</span>
+                    <span
+                      class="demo-toggle is-on"
+                      data-demo-control="toggle"
+                      data-demo-toggle="clear-on-new"
+                    ><span class="demo-toggle__track"></span></span>
+                  </div>
+                  <div class="setting-row">
+                    <span class="setting-label">{{demo.settings.autoCheckUpdates}}</span>
+                    <span
+                      class="demo-toggle is-on"
+                      data-demo-control="toggle"
+                      data-demo-toggle="auto-check-updates"
+                    ><span class="demo-toggle__track"></span></span>
+                  </div>
+                  <div class="setting-row">
+                    <span class="setting-label">{{demo.settings.autoInstallUpdates}}</span>
+                    <span
+                      class="demo-toggle"
+                      data-demo-control="toggle"
+                      data-demo-toggle="auto-install-updates"
+                    ><span class="demo-toggle__track"></span></span>
+                  </div>
+                  <div class="setting-row setting-row--updates">
+                    <span class="setting-label">{{demo.settings.updates}}</span>
+                    <span class="demo-btn demo-btn--inline" data-demo-control="check-updates">{{demo.settings.checkNow}}</span>
+                  </div>
+                  <div class="setting-row setting-row--locale">
+                    <span class="setting-label">{{demo.settings.language}}</span>
+                    <span class="demo-picker" data-demo-control="locale-picker" data-demo-menu="locale">
+                      <span class="demo-picker__value" data-demo-locale-value>{{demo.settings.languageSystem}}</span>
+                      <span class="demo-picker__chevron" aria-hidden="true">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      </span>
+                    </span>
+                    <ul class="demo-menu is-hidden" data-demo-menu-panel="locale">
+                      <li class="demo-menu__item is-selected" data-demo-menu-option="locale">{{demo.settings.languageSystem}}</li>
+                      <li class="demo-menu__item" data-demo-menu-option="locale">{{demo.settings.languageDe}}</li>
+                      <li class="demo-menu__item" data-demo-menu-option="locale">{{demo.settings.languageEn}}</li>
+                      <li class="demo-menu__item" data-demo-menu-option="locale">{{demo.settings.languageEs}}</li>
+                      <li class="demo-menu__item" data-demo-menu-option="locale">{{demo.settings.languageFr}}</li>
+                      <li class="demo-menu__item" data-demo-menu-option="locale">{{demo.settings.languageIt}}</li>
+                      <li class="demo-menu__item" data-demo-menu-option="locale">{{demo.settings.languageJa}}</li>
+                      <li class="demo-menu__item" data-demo-menu-option="locale">{{demo.settings.languagePtBr}}</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
               <footer class="app-footer">
-                <div class="app-footer__group">
+                <div class="app-footer-meta">
+                  <p class="app-version">{{demo.settings.versionPrefix}}{{release.version}}</p>
+                  <p class="update-status">{{demo.settings.upToDate}}</p>
+                </div>
+                <div class="app-footer-actions">
                   <span class="demo-cancel text-btn" hidden>{{t.cancel}}</span>
-                  <span class="text-btn app-settings-btn">{{t.settingsHeading}}</span>
+                  <span class="text-btn app-settings-btn" data-demo-open-settings>{{t.settingsHeading}}</span>
+                  <span class="text-btn app-settings-back" data-demo-close-settings>{{demo.settings.back}}</span>
                 </div>
               </footer>
+            </div>
+            <div
+              class="demo-confirm is-hidden"
+              data-demo-confirm
+              role="dialog"
+              aria-modal="true"
+              aria-hidden="true"
+            >
+              <div class="demo-confirm__backdrop"></div>
+              <div class="demo-confirm__panel">
+                <h2 class="demo-confirm__title">{{demo.settings.confirmDisableMinSuffix.title}}</h2>
+                <p class="demo-confirm__body">{{demo.settings.confirmDisableMinSuffix.body}}</p>
+                <div class="demo-confirm__actions">
+                  <span class="text-btn">{{t.cancel}}</span>
+                  <span class="demo-btn demo-confirm__ok" data-demo-confirm-ok
+                    >{{demo.settings.confirmDisableMinSuffix.confirm}}</span
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>

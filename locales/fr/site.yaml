@@ -58,15 +58,54 @@ demo:
   rows:
     - filename: capture-2026.png
       result: 80 % économisés · 4,2 Mo → 820 Ko
-      output: capture-2026.min.png
+      output: /Users/jean/Images/Vacances/capture-2026.min.png
     - filename: vacances-032.jpg
       result: 83 % économisés · 8,1 Mo → 1,4 Mo
-      output: vacances-032.min.jpg
+      output: /Users/jean/Images/Vacances/vacances-032.min.jpg
     - filename: animation.gif
       result: 84 % économisés · 6,7 Mo → 1,1 Mo
-      output: animation.min.gif
+      output: /Users/jean/Desktop/animation.min.gif
     - filename: couverture.avif
       result: 84 % économisés · 2,5 Mo → 400 Ko
-      output: couverture.min.avif
+      output: /Users/jean/Documents/Projets/couverture.min.avif
   compressing: Compression de %s…
   summary: 4 images · 17,8 Mo économisés (83 %)
+  settings:
+    title: Réglages
+    back: Fermer
+    versionPrefix: 'Version '
+    upToDate: DropSlim est à jour.
+    saveInSameFolder: Enregistrer les fichiers optimisés dans le même dossier
+    chooseFolder: Choisir un dossier
+    chooseFolderOpen: Ouvrir
+    minSuffix: Ajouter le suffixe .min aux fichiers optimisés
+    minifiedSubfolder: Ajouter le sous-dossier « minified »
+    limitDimensions: Limiter la largeur / hauteur max.
+    limitDimensionsHint: JPEG, PNG, WebP et AVIF
+    maxWidth: Largeur max. (px)
+    maxHeight: Hauteur max. (px)
+    outputFormat: Format de sortie
+    outputFormatHint: Convertit JPEG, PNG, WebP, AVIF et HEIC (macOS). GIF et SVG gardent leur format.
+    formatOriginal: "Conserver le format d'origine"
+    formatJpeg: JPEG
+    formatPng: PNG
+    formatWebp: WebP
+    formatAvif: AVIF
+    clearOnNew: "Vider la liste lors d'une nouvelle optimisation"
+    autoCheckUpdates: Rechercher les mises à jour automatiquement
+    autoInstallUpdates: Installer les mises à jour sans demander
+    language: Langue
+    languageSystem: Langue du système
+    languageDe: Deutsch
+    languageEn: English
+    languageFr: Français
+    languageEs: Español
+    languageIt: Italiano
+    languageJa: 日本語
+    languagePtBr: 'Português (Brasil)'
+    updates: Mises à jour
+    checkNow: Vérifier
+    confirmDisableMinSuffix:
+      title: Écraser les originaux ?
+      body: Sans le suffixe .min, les fichiers optimisés peuvent écraser des fichiers existants portant le même nom.
+      confirm: Désactiver le suffixe
