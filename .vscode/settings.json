@@ -2,9 +2,17 @@
   "workbench.colorCustomizations": {
     "activityBar.background": "#541045",
     "titleBar.activeBackground": "#751660",
-    "titleBar.activeForeground": "#FEFCFE",
+    "titleBar.activeForeground": "#FFFFFF",
     "titleBar.inactiveBackground": "#541045",
-    "titleBar.inactiveForeground": "#FEFCFE"
+    "titleBar.inactiveForeground": "#FFFFFF",
+    "statusBar.background": "#541045",
+    "statusBar.debuggingBackground": "#541045",
+    "statusBar.noFolderBackground": "#541045",
+    "activityBar.foreground": "#FFFFFF",
+    "activityBar.inactiveForeground": "#FFFFFF",
+    "statusBar.foreground": "#FFFFFF",
+    "statusBar.debuggingForeground": "#FFFFFF",
+    "statusBar.noFolderForeground": "#FFFFFF"
   },
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",

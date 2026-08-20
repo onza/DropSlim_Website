@@ -58,15 +58,54 @@ demo:
   rows:
     - filename: screenshot-2026.png
       result: You saved 80% · 4.2 MB → 820 KB
-      output: screenshot-2026.min.png
+      output: /Users/john/Pictures/Vacation/screenshot-2026.min.png
     - filename: vacation-032.jpg
       result: You saved 83% · 8.1 MB → 1.4 MB
-      output: vacation-032.min.jpg
+      output: /Users/john/Pictures/Vacation/vacation-032.min.jpg
     - filename: animation.gif
       result: You saved 84% · 6.7 MB → 1.1 MB
-      output: animation.min.gif
+      output: /Users/john/Desktop/animation.min.gif
     - filename: cover.avif
       result: You saved 84% · 2.5 MB → 400 KB
-      output: cover.min.avif
+      output: /Users/john/Documents/Projects/cover.min.avif
   compressing: Compressing %s…
   summary: 4 images · saved 17.8 MB (83%)
+  settings:
+    title: Settings
+    back: Close
+    versionPrefix: 'Version '
+    upToDate: DropSlim is up to date.
+    saveInSameFolder: Save optimized files in same folder
+    chooseFolder: Choose folder
+    chooseFolderOpen: Open
+    minSuffix: Add .min suffix to optimized files
+    minifiedSubfolder: 'Add "minified" subfolder'
+    limitDimensions: Limit max. width / height
+    limitDimensionsHint: JPEG, PNG, WebP, and AVIF
+    maxWidth: Max. width (px)
+    maxHeight: Max. height (px)
+    outputFormat: Output format
+    outputFormatHint: Converts JPEG, PNG, WebP, AVIF, and HEIC (macOS). GIF and SVG keep their format.
+    formatOriginal: Keep original format
+    formatJpeg: JPEG
+    formatPng: PNG
+    formatWebp: WebP
+    formatAvif: AVIF
+    clearOnNew: Clear result list when optimizing new images
+    autoCheckUpdates: Check for updates automatically
+    autoInstallUpdates: Install updates without asking
+    language: Language
+    languageSystem: System default
+    languageDe: Deutsch
+    languageEn: English
+    languageFr: Français
+    languageEs: Español
+    languageIt: Italiano
+    languageJa: 日本語
+    languagePtBr: 'Português (Brasil)'
+    updates: Updates
+    checkNow: Check now
+    confirmDisableMinSuffix:
+      title: Overwrite originals?
+      body: Without the .min suffix, optimized files can overwrite existing files with the same name.
+      confirm: Turn off suffix

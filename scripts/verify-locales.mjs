@@ -87,6 +87,21 @@ for (const meta of LOCALES) {
     fail(`[verify] ${meta.id}: missing demo rows`)
   }
 
+  if (
+    !locale.demo?.settings?.title ||
+    !locale.demo?.settings?.back ||
+    !locale.demo?.settings?.chooseFolder ||
+    !locale.demo?.settings?.outputFormatHint ||
+    !locale.demo?.settings?.formatAvif ||
+    !locale.demo?.settings?.language ||
+    !locale.demo?.settings?.checkNow ||
+    !locale.demo?.settings?.upToDate ||
+    !locale.demo?.settings?.confirmDisableMinSuffix?.title ||
+    !locale.demo?.settings?.confirmDisableMinSuffix?.confirm
+  ) {
+    fail(`[verify] ${meta.id}: missing demo settings labels`)
+  }
+
   if (!locale.install?.macos?.steps?.length || !locale.install?.windows?.steps?.length) {
     fail(`[verify] ${meta.id}: incomplete install instructions`)
   }

@@ -58,15 +58,54 @@ demo:
   rows:
     - filename: screenshot-2026.png
       result: 80% risparmiato · 4,2 MB → 820 KB
-      output: screenshot-2026.min.png
+      output: /Users/mario/Immagini/Viaggio/screenshot-2026.min.png
     - filename: vacanza-032.jpg
       result: 83% risparmiato · 8,1 MB → 1,4 MB
-      output: vacanza-032.min.jpg
+      output: /Users/mario/Immagini/Viaggio/vacanza-032.min.jpg
     - filename: animazione.gif
       result: 84% risparmiato · 6,7 MB → 1,1 MB
-      output: animazione.min.gif
+      output: /Users/mario/Desktop/animazione.min.gif
     - filename: copertina.avif
       result: 84% risparmiato · 2,5 MB → 400 KB
-      output: copertina.min.avif
+      output: /Users/mario/Documenti/Progetti/copertina.min.avif
   compressing: Compressione di %s…
   summary: 4 immagini · 17,8 MB risparmiati (83%)
+  settings:
+    title: Impostazioni
+    back: Chiudi
+    versionPrefix: 'Versione '
+    upToDate: DropSlim è aggiornato.
+    saveInSameFolder: Salva i file ottimizzati nella stessa cartella
+    chooseFolder: Scegli cartella
+    chooseFolderOpen: Apri
+    minSuffix: Aggiungi suffisso .min ai file ottimizzati
+    minifiedSubfolder: Aggiungi sottocartella «minified»
+    limitDimensions: Limita larghezza / altezza max.
+    limitDimensionsHint: JPEG, PNG, WebP e AVIF
+    maxWidth: Larghezza max. (px)
+    maxHeight: Altezza max. (px)
+    outputFormat: Formato di output
+    outputFormatHint: Converte JPEG, PNG, WebP, AVIF e HEIC (macOS). GIF e SVG mantengono il loro formato.
+    formatOriginal: Mantieni formato originale
+    formatJpeg: JPEG
+    formatPng: PNG
+    formatWebp: WebP
+    formatAvif: AVIF
+    clearOnNew: "Svuota l'elenco quando ottimizzi nuove immagini"
+    autoCheckUpdates: Cerca aggiornamenti automaticamente
+    autoInstallUpdates: Installa aggiornamenti senza chiedere
+    language: Lingua
+    languageSystem: Lingua di sistema
+    languageDe: Deutsch
+    languageEn: English
+    languageFr: Français
+    languageEs: Español
+    languageIt: Italiano
+    languageJa: 日本語
+    languagePtBr: 'Português (Brasil)'
+    updates: Aggiornamenti
+    checkNow: Controlla ora
+    confirmDisableMinSuffix:
+      title: Sovrascrivere gli originali?
+      body: Senza il suffisso .min, i file ottimizzati possono sovrascrivere file esistenti con lo stesso nome.
+      confirm: Disattiva suffisso

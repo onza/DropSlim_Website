@@ -58,15 +58,54 @@ demo:
   rows:
     - filename: captura-2026.png
       result: 80 % ahorrado · 4,2 MB → 820 KB
-      output: captura-2026.min.png
+      output: /Users/juan/Imágenes/Viaje/captura-2026.min.png
     - filename: vacaciones-032.jpg
       result: 83 % ahorrado · 8,1 MB → 1,4 MB
-      output: vacaciones-032.min.jpg
+      output: /Users/juan/Imágenes/Viaje/vacaciones-032.min.jpg
     - filename: animacion.gif
       result: 84 % ahorrado · 6,7 MB → 1,1 MB
-      output: animacion.min.gif
+      output: /Users/juan/Desktop/animacion.min.gif
     - filename: portada.avif
       result: 84 % ahorrado · 2,5 MB → 400 KB
-      output: portada.min.avif
+      output: /Users/juan/Documentos/Proyectos/portada.min.avif
   compressing: Comprimiendo %s…
   summary: 4 imágenes · 17,8 MB ahorrados (83 %)
+  settings:
+    title: Ajustes
+    back: Cerrar
+    versionPrefix: 'Versión '
+    upToDate: DropSlim está actualizado.
+    saveInSameFolder: Guardar archivos optimizados en la misma carpeta
+    chooseFolder: Elegir carpeta
+    chooseFolderOpen: Abrir
+    minSuffix: Añadir sufijo .min a los archivos optimizados
+    minifiedSubfolder: Añadir subcarpeta «minified»
+    limitDimensions: Limitar ancho / alto máx.
+    limitDimensionsHint: JPEG, PNG, WebP y AVIF
+    maxWidth: Ancho máx. (px)
+    maxHeight: Alto máx. (px)
+    outputFormat: Formato de salida
+    outputFormatHint: Convierte JPEG, PNG, WebP, AVIF y HEIC (macOS). GIF y SVG conservan su formato.
+    formatOriginal: Mantener formato original
+    formatJpeg: JPEG
+    formatPng: PNG
+    formatWebp: WebP
+    formatAvif: AVIF
+    clearOnNew: Vaciar la lista al optimizar nuevas imágenes
+    autoCheckUpdates: Buscar actualizaciones automáticamente
+    autoInstallUpdates: Instalar actualizaciones sin preguntar
+    language: Idioma
+    languageSystem: Idioma del sistema
+    languageDe: Deutsch
+    languageEn: English
+    languageFr: Français
+    languageEs: Español
+    languageIt: Italiano
+    languageJa: 日本語
+    languagePtBr: 'Português (Brasil)'
+    updates: Actualizaciones
+    checkNow: Comprobar ahora
+    confirmDisableMinSuffix:
+      title: ¿Sobrescribir originales?
+      body: Sin el sufijo .min, los archivos optimizados pueden sobrescribir archivos existentes con el mismo nombre.
+      confirm: Desactivar sufijo

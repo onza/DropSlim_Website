@@ -58,15 +58,54 @@ demo:
   rows:
     - filename: screenshot-2026.png
       result: 80% economizado · 4,2 MB → 820 KB
-      output: screenshot-2026.min.png
+      output: /Users/joao/Pictures/Viagem/screenshot-2026.min.png
     - filename: ferias-032.jpg
       result: 83% economizado · 8,1 MB → 1,4 MB
-      output: ferias-032.min.jpg
+      output: /Users/joao/Pictures/Viagem/ferias-032.min.jpg
     - filename: animacao.gif
       result: 84% economizado · 6,7 MB → 1,1 MB
-      output: animacao.min.gif
+      output: /Users/joao/Desktop/animacao.min.gif
     - filename: capa.avif
       result: 84% economizado · 2,5 MB → 400 KB
-      output: capa.min.avif
+      output: /Users/joao/Documents/Projetos/capa.min.avif
   compressing: Comprimindo %s…
   summary: 4 imagens · 17,8 MB economizados (83%)
+  settings:
+    title: Configurações
+    back: Fechar
+    versionPrefix: 'Versão '
+    upToDate: O DropSlim está atualizado.
+    saveInSameFolder: Salvar arquivos otimizados na mesma pasta
+    chooseFolder: Escolher pasta
+    chooseFolderOpen: Abrir
+    minSuffix: Adicionar sufixo .min aos arquivos otimizados
+    minifiedSubfolder: Adicionar subpasta «minified»
+    limitDimensions: Limitar largura / altura máx.
+    limitDimensionsHint: JPEG, PNG, WebP e AVIF
+    maxWidth: Largura máx. (px)
+    maxHeight: Altura máx. (px)
+    outputFormat: Formato de saída
+    outputFormatHint: Converte JPEG, PNG, WebP, AVIF e HEIC (macOS). GIF e SVG mantêm o formato.
+    formatOriginal: Manter formato original
+    formatJpeg: JPEG
+    formatPng: PNG
+    formatWebp: WebP
+    formatAvif: AVIF
+    clearOnNew: Limpar a lista ao otimizar novas imagens
+    autoCheckUpdates: Verificar atualizações automaticamente
+    autoInstallUpdates: Instalar atualizações sem perguntar
+    language: Idioma
+    languageSystem: Padrão do sistema
+    languageDe: Deutsch
+    languageEn: English
+    languageFr: Français
+    languageEs: Español
+    languageIt: Italiano
+    languageJa: 日本語
+    languagePtBr: 'Português (Brasil)'
+    updates: Atualizações
+    checkNow: Verificar agora
+    confirmDisableMinSuffix:
+      title: Substituir originais?
+      body: Sem o sufixo .min, os arquivos otimizados podem substituir arquivos existentes com o mesmo nome.
+      confirm: Desativar sufixo
