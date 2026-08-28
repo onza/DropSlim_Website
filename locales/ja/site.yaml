@@ -2,7 +2,7 @@ seo:
   home:
     title: DropSlim — Mac と Windows で画像を小さく
     description: DropSlim は Mac と Windows で画像をローカルに圧縮・変換 — 高速、ドラッグ＆ドロップ。アカウント不要、サーバー不要、無料でオープンソース。
-    keywords: DropSlim, 画像圧縮, 画像変換, macOS, Windows, JPEG, PNG, WebP, HEIC, AVIF, ドラッグアンドドロップ, 画像を縮小, オープンソース
+    keywords: DropSlim, 画像圧縮, 画像変換, macOS, Windows, CLI, コマンドライン, Homebrew, JPEG, PNG, WebP, HEIC, AVIF, ドラッグアンドドロップ, 画像を縮小, オープンソース
   legalNotice:
     title: 法的通知 · DropSlim
     description: DropSlim ウェブサイトの法的通知と提供者情報。
@@ -53,6 +53,18 @@ install:
       - インストーラーを実行する。
       - SmartScreen で「Windows によって PC が保護されました」と表示されたら「詳細情報」→「実行」を選ぶ。
       - セットアップ ウィザードに従い、スタートメニューまたはデスクトップのショートカットから DropSlim を起動する。
+  cli:
+    heading: CLI（macOS）
+    requirements: macOS 11（Big Sur）以降、Apple Silicon（M1 以降）
+    intro: バッチ圧縮用のコマンドラインツール — アプリと同じエンジン、GUI なし。
+    commands:
+      - brew tap onza/tap
+      - brew install dropslim
+      - dropslim compress photo.png images/
+    steps:
+      - dropslim compress --help で出力フォルダ、形式、最大サイズ、JSON 出力のオプションを確認。
+    note: |
+      または [GitHub Releases](https://github.com/onza/DropSlim/releases) から **`dropslim-cli_*_aarch64.tar.gz`** をダウンロード。
 demo:
   queued: 待機中
   rows:

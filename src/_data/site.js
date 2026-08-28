@@ -19,6 +19,9 @@ export default {
       windows: {
         url: 'https://github.com/onza/DropSlim/releases/download/v1.4.0/DropSlim_1.4.0_x64-setup.exe',
       },
+      cli: {
+        url: 'https://github.com/onza/DropSlim/releases/download/v1.6.3/dropslim-cli_1.6.3_aarch64.tar.gz',
+      },
     },
   },
 }

@@ -2,7 +2,7 @@ seo:
   home:
     title: DropSlim — Shrink Images on Mac and Windows
     description: DropSlim compresses and converts images locally on Mac and Windows — fast, drag & drop. No account, no server, free and open source.
-    keywords: DropSlim, image compression, image convert, macOS, Windows, JPEG, PNG, WebP, HEIC, AVIF, drag and drop, shrink images, open source
+    keywords: DropSlim, image compression, image convert, macOS, Windows, CLI, command line, Homebrew, JPEG, PNG, WebP, HEIC, AVIF, drag and drop, shrink images, open source
   legalNotice:
     title: Legal Notice · DropSlim
     description: Legal notice and provider information for the DropSlim website.
@@ -53,6 +53,18 @@ install:
       - Run the installer.
       - If SmartScreen shows "Windows protected your PC", click More info, then Run anyway.
       - Follow the setup wizard and start DropSlim from the Start menu or desktop shortcut.
+  cli:
+    heading: CLI (macOS)
+    requirements: macOS 11 (Big Sur) or later, Apple Silicon (M1 or newer)
+    intro: Command-line tool for batch compression — same engine as the app, no GUI.
+    commands:
+      - brew tap onza/tap
+      - brew install dropslim
+      - dropslim compress photo.png images/
+    steps:
+      - Run dropslim compress --help for output folder, format, max dimensions, and JSON output.
+    note: |
+      Or download **`dropslim-cli_*_aarch64.tar.gz`** from [GitHub Releases](https://github.com/onza/DropSlim/releases).
 demo:
   queued: waiting
   rows:

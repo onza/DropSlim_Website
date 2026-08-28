@@ -49,6 +49,12 @@ features:
     title: Multilingue
     body: Italiano, English, Deutsch, Français, Español, 日本語 e Português — oppure la lingua di sistema.
   - num: '12'
+    title: CLI (macOS)
+    body: Compressione batch da terminale — stesso motore dell'app, senza GUI. Installazione via Homebrew o tarball. Solo Apple Silicon.
+  - num: '13'
+    title: Apri con DropSlim (macOS)
+    body: Tasto destro su un'immagine nel Finder → Apri con → DropSlim. Comprimi senza trascinare sulla finestra dell'app.
+  - num: '14'
     title: Open Source
     body: Licenza MIT. Codice sorgente su <a href="https://github.com/onza/DropSlim" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (si apre in una nuova scheda)</span></a> — ispezionabile, forkabile, aperto ai contributi.
     rich: true

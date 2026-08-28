@@ -31,13 +31,16 @@
     "install": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["macos", "windows"],
+      "required": ["macos", "windows", "cli"],
       "properties": {
         "macos": {
           "$ref": "#/$defs/installPanel"
         },
         "windows": {
           "$ref": "#/$defs/installPanel"
+        },
+        "cli": {
+          "$ref": "#/$defs/installCliPanel"
         }
       }
     },
@@ -249,6 +252,39 @@
         },
         "requirements": {
           "type": "string"
+        },
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "installCliPanel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["heading", "requirements", "intro", "commands", "steps"],
+      "properties": {
+        "heading": {
+          "type": "string"
+        },
+        "requirements": {
+          "type": "string"
+        },
+        "intro": {
+          "type": "string"
+        },
+        "commands": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
         },
         "steps": {
           "type": "array",

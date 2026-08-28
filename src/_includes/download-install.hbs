@@ -23,4 +23,19 @@
       <div class='install-note'>{{{install.windows.noteHtml}}}</div>
     {{/if}}
   </article>
+  <article class='install-panel install-panel--cli glass-panel'>
+    <h3>{{install.cli.heading}}</h3>
+    <p class='install-req'>{{install.cli.requirements}}</p>
+    <p class='install-intro'>{{install.cli.intro}}</p>
+    <pre class='install-code'><code>{{#each install.cli.commands}}{{this}}
+{{/each}}</code></pre>
+    <ol>
+      {{#each install.cli.steps}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ol>
+    {{#if install.cli.noteHtml}}
+      <div class='install-note'>{{{install.cli.noteHtml}}}</div>
+    {{/if}}
+  </article>
 </div>

@@ -66,6 +66,12 @@
   @media (min-width: 840px) {
     grid-template-columns: 1fr 1fr;
   }
+
+  .install-panel--cli {
+    @media (min-width: 840px) {
+      grid-column: 1 / -1;
+    }
+  }
 }
 
 .install-panel {
@@ -77,11 +83,29 @@
     font-weight: 700;
     margin: 0 0 0.5rem;
   }
-  .install-req {
+  .install-req,
+  .install-intro {
     font-size: var(--size-label);
     color: var(--muted);
     margin: 0 0 1rem;
     line-height: 1.5;
+  }
+  .install-code {
+    margin: 0 0 1rem;
+    padding: 1rem 1.125rem;
+    border-radius: 8px;
+    background: hsl(220 14% 12% / 0.55);
+    border: 1px solid hsl(220 12% 22% / 0.65);
+    overflow-x: auto;
+
+    code {
+      display: block;
+      font-family: var(--mono);
+      font-size: var(--size-label);
+      line-height: 1.65;
+      color: var(--text);
+      white-space: pre;
+    }
   }
   ol {
     margin: 0 0 1rem 1.25rem;

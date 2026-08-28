@@ -79,10 +79,19 @@ function enrichInstallPanel(panel) {
   }
 }
 
+function enrichInstallCliPanel(panel) {
+  if (!panel) return panel
+  return {
+    ...panel,
+    noteHtml: panel.note ? renderMarkdown(String(panel.note).trim()) : '',
+  }
+}
+
 export function enrichInstall(install) {
   if (!install) return null
   return {
     macos: enrichInstallPanel(install.macos),
     windows: enrichInstallPanel(install.windows),
+    cli: enrichInstallCliPanel(install.cli),
   }
 }

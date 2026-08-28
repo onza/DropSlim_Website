@@ -49,6 +49,12 @@ features:
     title: 多言語対応
     body: 日本語、English、Deutsch、Français、Español、Italiano、Português — またはシステム言語に合わせます。
   - num: '12'
+    title: CLI（macOS）
+    body: ターミナルからバッチ圧縮 — アプリと同じエンジン、GUI なし。Homebrew または tarball でインストール。Apple Silicon のみ。
+  - num: '13'
+    title: DropSlim で開く（macOS）
+    body: Finder で画像を右クリック → このアプリケーションで開く → DropSlim。ウィンドウにドラッグせずに圧縮。
+  - num: '14'
     title: オープンソース
     body: MIT ライセンス。ソースコードは <a href="https://github.com/onza/DropSlim" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden">（新しいタブで開く）</span></a> — 確認・フォーク・貢献が可能。
     rich: true
